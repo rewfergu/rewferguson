@@ -1,2 +1,3 @@
 # rewferguson
-my personal site
+
+My personal site, built using the Jekyll static site generator.  
