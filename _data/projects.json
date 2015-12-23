@@ -1,0 +1,120 @@
+{
+  "categories": {
+    "Branches": {
+      "name": "branches",
+      "status": 1,
+      "image": "/img/Branches/output.png",
+      "description": "Randomly generated artwork created in Processing. Processing takes an SVG file with tiles inside and arranges them on a grid in random order so the white curves connect from tile to tile. For the most part."
+    },
+    "Timer": {
+      "name": "Timer",
+      "status": 1,
+      "description": "A simple animated timer application written in JavaScript, SVG and the Electron framework."
+    },
+    "Angular-Todo-List": {
+      "name": "Angular Todo List",
+      "status": 1,
+      "description": "A simple todo list built in Angular, Ionic and Firebase. I’ve never made one, so I wanted to try one as a test. The only aspect of this app that I haven’t seen anywhere else is I wanted a daily list that would reset itself each day. I have items that I would like to check off each day, and the next morning be presented with a fresh list."
+    },
+    "Budget-Tracker": {
+      "name": "Budget Tracker",
+      "status": 1,
+      "image": "/img/Budget-Tracker/sample.png",
+      "description": "A mobile application used to track expenses. Built in AngularJS with a Firebase backend."
+    },
+    "Drawing-Game": {
+      "name": "Drawing Game",
+      "status": 1,
+      "description": "A mobile game where you are presented with parts of a design, and you use drawing tools to complete the image."
+    },
+    "DynamiCat": {
+      "name": "DynamiCat",
+      "status": 1,
+      "image": "/img/DynamiCat/threeCats.png",
+      "description": "A script in Processing to dynamically create cat faces based on hand drawn components."
+    },
+    "Frame-Squeezer": {
+      "name": "Frame Squeezer",
+      "status": 1,
+      "image": "/img/Frame-Squeezer/output.png",
+      "description": "I really liked the movie barcode images on Tumblr, and I’ve been trying to figure out a way to approximate that type of image using Processing."
+    },
+    "Midi-Controller": {
+      "name": "Midi Controller",
+      "status": 1,
+      "description": "Some controls in Logic are just easier if you have a physical knob or control to manipulate. Assigning them is pretty easy in the software, I just need to create some knobs to assign. Arduino can output this info in MIDI."
+    },
+    "Photo-Scramble": {
+      "name": "Photo Scramble",
+      "status": 1,
+      "image": "/img/Photo-Scramble/header.png",
+      "description": "A basic photo scramble game. I wanted to design a project in javascript that I could then wrap in PhoneGap and try to access the camera roll to play a game."
+    },
+    "Raspberry-Pi-Video-Camera": {
+      "name": "Raspberry Pi Video Camera",
+      "status": 1,
+      "description": "I used to have a pretty big collection of vintage cameras, although its quite a bit smaller these days. I purchased a really cool Canon super 8 camera with sound the other day and I’ve been trying to figure out to breathe new life into it. I imagined that if I could find a way to modify the Raspberry Pi camera module and fit it inside the case, there would be enough room inside the film compartment for the rest of the Raspberry Pi’s electronics. I’d have a Raspberry Pi powered camera inside a cool vintage super 8 case."
+    },
+    "Untitled-Water-Drop-Game": {
+      "name": "Untitled Water Drop Game",
+      "status": 1,
+      "image": "/img/Untitled-Water-Drop-Game/header.gif",
+      "description": "A mobile game where the main character is a drop of water. Physical properties like surface tension apply. Enemies are evaporative elements like sun, fires, etc."
+    },
+    "Weather-Lamp": {
+      "name": "Weather Lamp",
+      "status": 1,
+      "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself."
+    },
+
+
+
+
+    "Arduino-Web-Controller": {
+      "name": "Arduino Web Controller",
+      "status": 2,
+      "description": "I want to control hardware through a web interface."
+    },
+    "Laptop-Stand": {
+      "name": "Laptop Stand",
+      "status": 2,
+      "description": "I want my own laptop stand for my desk"
+    },
+    "Maze-Game": {
+      "name": "Maze Game",
+      "status": 2,
+      "description": "A simple maze game for mobile that uses the accelerometer to move the player."
+    },
+    "Octopus": {
+      "name": "Octopus",
+      "status": 2,
+      "description": "I’m trying to script a looping animation for octopus tentacle(s)."
+    },
+    "Projector": {
+      "name": "Projector",
+      "status": 2,
+      "description": "a diy method of projecting images from my computer"
+    },
+
+
+    "Udacity-Arcade-Game-Project": {
+      "name": "Udacity Arcade Game Project",
+      "status": 3,
+      "description": "Project 4 for the Udacity Front End Developer Nanodegree program."
+    },
+    "Udacity-Neighborhood-Map-Project": {
+      "name": "Udacity Neighborhood Map Project",
+      "status": 3,
+      "description": "Project 5 for the Udacity Front End Developer Nanodegree program."
+    },
+    "iPad-Stand": {
+      "name": "iPad Stand",
+      "status": 3,
+    },
+    "Raspberry-Pi-Bluetooth-Audio-Receiver": {
+      "name": "Raspberry Pi Bluetooth Audio Receiver",
+      "status": 3,
+      "description": "A Raspberry Pi, with a Bluetooth adapter can receive audio from a variety of sources and output the signal through its built-in audio outputs. Any audio device with an aux jack could potentially receive a wireless Bluetooth audio signal."
+    },
+  }
+}

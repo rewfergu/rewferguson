@@ -1,0 +1,14 @@
+# Site settings
+title: Robert Ferguson
+email: rob@rewferguson.com
+description: > # this means to ignore newlines until "baseurl:"
+  Portfolio site for Robert Ferguson
+baseurl: "" # the subpath of your site, e.g. /blog/
+permalink: /:categories/:title
+excerpt_separator: <!--more-->
+url: "http://rewferguson.com" # the base hostname & protocol for your site
+twitter_username: rewfergu
+github_username:  rewfergu
+
+# Build settings
+markdown: kramdown

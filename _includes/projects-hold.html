@@ -1,0 +1,48 @@
+<!-- ON HOLD PROJECTS -->
+<section class="wrapper projects-list">
+  <header class="project-group-heading">
+    <h1>On Hold</h1>
+    <nav>
+      <ul class="project-group-list">
+        {% for cat in site.data.projects.categories %}
+        {% if cat[1].status == 2 %}
+          <li class="cat-item">
+            <a href="{{ include.prefix }}{{ cat[0] }}">{{ cat[1].name }}</a>
+          </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <div class="project-group">
+    {% for cat in site.data.projects.categories %}
+    {% if cat[1].status == 2 %}
+    <section class="category">
+      <h2 class="category-title"><a href="{{ include.prefix }}{{ cat[0] }}">{{ cat[1].name }}</a></h2>
+      <p>{{ cat[1].description }}</p>
+      {% assign tempCat = cat[0] %}
+      {% for post in site.categories[tempCat] limit:1 %}
+        <article class="post">
+          <header class="entry-header">
+            <h1 class="entry-title">
+              <a href="{{ post.url }}">
+                {{post.title}}
+              </a>
+            </h1>
+            <div class="entry-meta">
+              <span class="posted-on">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+          </header>
+          <div class="entry-content">
+            {{ post.content }}
+          </div>
+        </article>
+      {% endfor %}
+      <footer class="project-group-footer">
+        <a class="button small more-btn" href="{{ include.prefix }}{{ cat[0] }}">More</a>
+      </footer>
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
