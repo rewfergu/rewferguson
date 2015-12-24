@@ -9,6 +9,7 @@
     "Timer": {
       "name": "Timer",
       "status": 1,
+      "image": "/img/Timer/header.svg",
       "description": "A simple animated timer application written in JavaScript, SVG and the Electron framework."
     },
     "Angular-Todo-List": {
