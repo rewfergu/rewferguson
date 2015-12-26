@@ -18,8 +18,14 @@
     {% for cat in site.data.projects.categories %}
     {% if cat[1].status == 3 %}
     <section class="category">
-      <h2 class="category-title"><a href="{{ include.prefix }}{{ cat[0] }}">{{ cat[1].name }}</a></h2>
-      <p>{{ cat[1].description }}</p>
+      <header class="project-heading">
+        <h2 class="category-title"><a href="{{ include.prefix }}{{ cat[0] }}">{{ cat[1].name }}</a></h2>
+        {% if cat[1].image %}
+        <img src="{{ cat[1].image }}" alt="project header graphic" />
+        {% endif %}
+        <p>{{ cat[1].description }}</p>
+      </header>
+
       {% assign tempCat = cat[0] %}
       {% for post in site.categories[tempCat] limit:1 %}
         <article class="post">
@@ -33,9 +39,6 @@
               <span class="posted-on">{{ post.date | date: "%b %-d, %Y" }}</span>
             </div>
           </header>
-          <div class="entry-content">
-            {{ post.content }}
-          </div>
         </article>
       {% endfor %}
       <footer class="project-group-footer">

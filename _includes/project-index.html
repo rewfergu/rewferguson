@@ -33,13 +33,15 @@
 
   <div class="project-group">
     <section class="category">
-
-      <h2 class="category-title">
-        {{ site.data.projects.categories[include.cat].name }}
-      </h2>
-      <p>
-        {{ site.data.projects.categories[include.cat].description }}
-      </p>
+      <header class="project-heading">
+        <h2 class="category-title">
+          {{ site.data.projects.categories[include.cat].name }}
+        </h2>
+        <img src="{{ site.data.projects.categories[include.cat].image }}" alt="project header graphic" />
+        <p>
+          {{ site.data.projects.categories[include.cat].description }}
+        </p>
+      </header>
 
       {% for post in site.categories[include.cat] %}
         <article class="post" id="{{ post.id }}">

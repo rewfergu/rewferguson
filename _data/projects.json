@@ -65,6 +65,7 @@
     "Weather-Lamp": {
       "name": "Weather Lamp",
       "status": 1,
+      "image": "/img/Weather-Lamp/header.svg",
       "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself."
     },
 
@@ -101,11 +102,13 @@
     "Udacity-Arcade-Game-Project": {
       "name": "Udacity Arcade Game Project",
       "status": 3,
+      "image": "/img/Udacity-Arcade-Game-Project/screenshot.png",
       "description": "Project 4 for the Udacity Front End Developer Nanodegree program."
     },
     "Udacity-Neighborhood-Map-Project": {
       "name": "Udacity Neighborhood Map Project",
       "status": 3,
+      "image": "/img/Udacity-Neighborhood-Map-Project/header.png",
       "description": "Project 5 for the Udacity Front End Developer Nanodegree program."
     },
     "iPad-Stand": {
