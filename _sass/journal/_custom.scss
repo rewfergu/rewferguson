@@ -337,3 +337,16 @@ figure {
 .cp_embed_iframe {
   border: 1px solid #ccc;
 }
+
+.tags {
+  list-style: none;
+  margin: 0 0 1rem;
+}
+
+.tags__tag {
+  display: inline-block;
+  background: #efefef;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+}

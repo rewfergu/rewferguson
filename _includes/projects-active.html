@@ -24,6 +24,13 @@
           <img src="{{ cat[1].image }}" alt="project header graphic" />
           {% endif %}
           <p>{{ cat[1].description }}</p>
+          {% if cat[1].tags %}
+            <ul class="tags">
+              {% for tag in cat[1].tags %}
+                <li class="tags__tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </header>
 
         {% assign tempCat = cat[0] %}
