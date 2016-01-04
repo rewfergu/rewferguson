@@ -134,20 +134,7 @@
       "status": 3,
       "image": "/img/Udacity-Neighborhood-Map-Project/header.png",
       "description": "Project 5 for the Udacity Front End Developer Nanodegree program.",
-      "tags": [
-        'javascript',
-        'knockoutjs',
-        'requirejs',
-        'bootstrap',
-        'sass',
-        'Google Maps JavaScript API'
-        'Google Geocode API',
-        'Google Places API',
-        'Dark Sky Weather API',
-        'Wikipedia API',
-        'Foursquare API',
-        'Flickr API',
-      ],
+      "tags": ['javascript', 'knockoutjs', 'requirejs', 'bootstrap', 'sass', 'Google Maps JavaScript API', 'Google Geocode API', 'Google Places API', 'Dark Sky Weather API', 'Wikipedia API', 'Foursquare API', 'Flickr API'],
     },
     "iPad-Stand": {
       "name": "iPad Stand",
