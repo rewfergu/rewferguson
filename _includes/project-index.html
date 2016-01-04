@@ -41,6 +41,13 @@
         <p>
           {{ site.data.projects.categories[include.cat].description }}
         </p>
+        {% if site.data.projects.categories[include.cat].tags %}
+          <ul class="tags">
+            {% for tag in site.data.projects.categories[include.cat].tags %}
+              <li class="tags__tag">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </header>
 
       {% for post in site.categories[include.cat] %}
