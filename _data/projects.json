@@ -3,6 +3,7 @@
     "FlipDraw": {
       "name": "Flip Draw",
       "status": 1,
+      "image": "/img/flipDraw/header.png",
       "description": "Simple two player drawing and guessing game using JavaScript.  One player has a blank drawing canvas and the other player has scrambled letter tiles.  As the first player draws the second player guesses the drawing by assembling the tiles.",
       "tags": ["svg", "paperjs", "canvas", "firebase", "javascript", "jquery", "jquery ui", "mobile"]
     },
