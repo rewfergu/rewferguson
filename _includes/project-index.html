@@ -37,7 +37,10 @@
         <h2 class="category-title">
           {{ site.data.projects.categories[include.cat].name }}
         </h2>
+        {% if site.data.projects.categories[include.cat].image %}
         <img src="{{ site.data.projects.categories[include.cat].image }}" alt="project header graphic" />
+        {% endif %}
+
         <p>
           {{ site.data.projects.categories[include.cat].description }}
         </p>
