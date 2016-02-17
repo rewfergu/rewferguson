@@ -90,6 +90,7 @@
     "Quadcopter": {
       "name": "Quadcopter",
       "status": 1,
+      "image": "/img/Quadcopter/header.svg",
       "description": "I'm trying to build a quadcopter, and learning about each piece as I go.",
       "tags": ["arduino", "node", "raspberry pi", "johnny five"],
     },
