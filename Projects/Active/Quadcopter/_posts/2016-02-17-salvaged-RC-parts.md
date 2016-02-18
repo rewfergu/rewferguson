@@ -8,4 +8,4 @@ I was able to salvage the transmitter, receiver, motor, speed controller, and se
 
 It does need lots of batteries, which I don't have, so I just pulled a couple AC adapters out of my AC adapter graveyard and wired the transmitter and receiver directly to them. The receiver worked with 5 volts and the transmitter with 12.
 
-<video src="/img/Quadcopter/rc_test.mp4" controls />
+<video src="/img/Quadcopter/rc_test.mp4" controls></video>
