@@ -21,8 +21,8 @@
       "description": "A simple animated timer application written in JavaScript, SVG and the Electron framework.",
       "tags": ["svg", "animation", "javascript", "electron"],
     },
-    "Angular-Todo-List": {
-      "name": "Angular Todo List",
+    "TodoRedo": {
+      "name": "TodoRedo",
       "status": 1,
       "description": "A simple todo list built in Angular, Ionic and Firebase. I’ve never made one, so I wanted to try one as a test. The only aspect of this app that I haven’t seen anywhere else is I wanted a daily list that would reset itself each day. I have items that I would like to check off each day, and the next morning be presented with a fresh list.",
       "tags": ["angular", "ionic", "firebase", "javascript", "pouchdb"],
