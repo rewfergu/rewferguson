@@ -1,93 +1,93 @@
 {
   "categories": {
-    "FlipDraw": {
+    "flipdraw": {
       "name": "Flip Draw",
       "status": 1,
       "image": "/img/flipDraw/header.png",
       "description": "Simple two player drawing and guessing game using JavaScript.  One player has a blank drawing canvas and the other player has scrambled letter tiles.  As the first player draws the second player guesses the drawing by assembling the tiles.",
       "tags": ["svg", "paperjs", "canvas", "firebase", "javascript", "jquery", "jquery ui", "mobile"]
     },
-    "Branches": {
+    "branches": {
       "name": "branches",
       "status": 1,
       "image": "/img/Branches/output.png",
       "description": "Randomly generated artwork created in Processing. Processing takes an SVG file with tiles inside and arranges them on a grid in random order so the white curves connect from tile to tile. For the most part.",
       "tags": ["svg","processing"],
     },
-    "Timer": {
+    "timer": {
       "name": "Timer",
       "status": 1,
       "image": "/img/Timer/header.svg",
       "description": "A simple animated timer application written in JavaScript, SVG and the Electron framework.",
       "tags": ["svg", "animation", "javascript", "electron"],
     },
-    "TodoRedo": {
+    "todoredo": {
       "name": "TodoRedo",
       "status": 1,
       "description": "A simple todo list built in Angular, Ionic and Firebase. I’ve never made one, so I wanted to try one as a test. The only aspect of this app that I haven’t seen anywhere else is I wanted a daily list that would reset itself each day. I have items that I would like to check off each day, and the next morning be presented with a fresh list.",
       "tags": ["angular", "ionic", "firebase", "javascript", "pouchdb"],
     },
-    "Budget-Tracker": {
+    "budget-tracker": {
       "name": "Budget Tracker",
       "status": 1,
       "image": "/img/Budget-Tracker/sample.png",
       "description": "A mobile application used to track expenses. Built in AngularJS with a Firebase backend.",
       "tags": ["angular", "firebase", "javascript"],
     },
-    "Drawing-Game": {
+    "drawing-game": {
       "name": "Drawing Game",
       "status": 1,
       "description": "A mobile game where you are presented with parts of a design, and you use drawing tools to complete the image.",
       "tags": ["javascript", "svg", "canvas", "processing", "p5"],
     },
-    "DynamiCat": {
+    "dynamicat": {
       "name": "DynamiCat",
       "status": 1,
       "image": "/img/DynamiCat/threeCats.png",
       "description": "A script in Processing to dynamically create cat faces based on hand drawn components.",
       "tags": ["processing", "svg"],
     },
-    "Frame-Squeezer": {
+    "frame-squeezer": {
       "name": "Frame Squeezer",
       "status": 1,
       "image": "/img/Frame-Squeezer/output.png",
       "description": "I really liked the movie barcode images on Tumblr, and I’ve been trying to figure out a way to approximate that type of image using Processing.",
       "tags": ["processing"],
     },
-    "Midi-Controller": {
+    "midi-controller": {
       "name": "Midi Controller",
       "status": 1,
       "description": "Some controls in Logic are just easier if you have a physical knob or control to manipulate. Assigning them is pretty easy in the software, I just need to create some knobs to assign. Arduino can output this info in MIDI.",
       "tags": ["arduino", "midi"],
     },
-    "Photo-Scramble": {
+    "photo-scramble": {
       "name": "Photo Scramble",
       "status": 1,
       "image": "/img/Photo-Scramble/header.png",
       "description": "A basic photo scramble game. I wanted to design a project in javascript that I could then wrap in PhoneGap and try to access the camera roll to play a game.",
       "tags": ["javascript", "jquery"],
     },
-    "Raspberry-Pi-Video-Camera": {
+    "raspberry-pi-video-camera": {
       "name": "Raspberry Pi Video Camera",
       "status": 1,
       "description": "I used to have a pretty big collection of vintage cameras, although its quite a bit smaller these days. I purchased a really cool Canon super 8 camera with sound the other day and I’ve been trying to figure out to breathe new life into it. I imagined that if I could find a way to modify the Raspberry Pi camera module and fit it inside the case, there would be enough room inside the film compartment for the rest of the Raspberry Pi’s electronics. I’d have a Raspberry Pi powered camera inside a cool vintage super 8 case.",
       "tags": ["raspberry pi", "python"],
     },
-    "Untitled-Water-Drop-Game": {
+    "untitled-water-drop-game": {
       "name": "Untitled Water Drop Game",
       "status": 1,
       "image": "/img/Untitled-Water-Drop-Game/header.gif",
       "description": "A mobile game where the main character is a drop of water. Physical properties like surface tension apply. Enemies are evaporative elements like sun, fires, etc.",
       "tags": ["animation", "javascript", "unity"],
     },
-    "Weather-Lamp": {
+    "weather-lamp": {
       "name": "Weather Lamp",
       "status": 1,
       "image": "/img/Weather-Lamp/header.svg",
       "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself.",
       "tags": ["processing"],
     },
-    "Quadcopter": {
+    "quadcopter": {
       "name": "Quadcopter",
       "status": 1,
       "image": "/img/Quadcopter/header.svg",
@@ -98,31 +98,31 @@
 
 
 
-    "Arduino-Web-Controller": {
+    "arduino-web-controller": {
       "name": "Arduino Web Controller",
       "status": 2,
       "description": "I want to control hardware through a web interface.",
       "tags": [],
     },
-    "Laptop-Stand": {
+    "laptop-stand": {
       "name": "Laptop Stand",
       "status": 2,
       "description": "I want my own laptop stand for my desk",
       "tags": [],
     },
-    "Maze-Game": {
+    "maze-game": {
       "name": "Maze Game",
       "status": 2,
       "description": "A simple maze game for mobile that uses the accelerometer to move the player.",
       "tags": [],
     },
-    "Octopus": {
+    "octopus": {
       "name": "Octopus",
       "status": 2,
       "description": "I’m trying to script a looping animation for octopus tentacle(s).",
       "tags": [],
     },
-    "Projector": {
+    "projector": {
       "name": "Projector",
       "status": 2,
       "description": "a diy method of projecting images from my computer",
@@ -130,25 +130,25 @@
     },
 
 
-    "Udacity-Arcade-Game-Project": {
+    "udacity-arcade-game-project": {
       "name": "Udacity Arcade Game Project",
       "status": 3,
       "image": "/img/Udacity-Arcade-Game-Project/screenshot.png",
       "description": "Project 4 for the Udacity Front End Developer Nanodegree program.",
       "tags": ['javascript', 'animation', 'canvas'],
     },
-    "Udacity-Neighborhood-Map-Project": {
+    "udacity-neighborhood-map-project": {
       "name": "Udacity Neighborhood Map Project",
       "status": 3,
       "image": "/img/Udacity-Neighborhood-Map-Project/header.png",
       "description": "Project 5 for the Udacity Front End Developer Nanodegree program.",
       "tags": ['javascript', 'knockoutjs', 'requirejs', 'bootstrap', 'sass', 'Google Maps JavaScript API', 'Google Geocode API', 'Google Places API', 'Dark Sky Weather API', 'Wikipedia API', 'Foursquare API', 'Flickr API'],
     },
-    "iPad-Stand": {
+    "ipad-stand": {
       "name": "iPad Stand",
       "status": 3,
     },
-    "Raspberry-Pi-Bluetooth-Audio-Receiver": {
+    "raspberry-pi-bluetooth-audio-receiver": {
       "name": "Raspberry Pi Bluetooth Audio Receiver",
       "status": 3,
       "description": "A Raspberry Pi, with a Bluetooth adapter can receive audio from a variety of sources and output the signal through its built-in audio outputs. Any audio device with an aux jack could potentially receive a wireless Bluetooth audio signal.",
