@@ -1,6 +1,7 @@
 @import "normalize";
 @import "settings";
 @import "foundation/components/type";
+
 // @import "foundation/components/inline-lists";
 // @import "foundation/components/labels";
 // @import "foundation/components/keystrokes";
@@ -12,7 +13,9 @@
 // @import "foundation/components/forms";
 // @import "foundation/components/switches";
 // @import "foundation/components/range-slider";
+
 @import "foundation/components/buttons";
+
 // @import "foundation/components/button-groups";
 // @import "foundation/components/split-buttons";
 // @import "foundation/components/dropdown-buttons";
@@ -23,7 +26,9 @@
 // @import "foundation/components/magellan";
 // @import "foundation/components/sub-nav";
 // @import "foundation/components/breadcrumbs";
-@import "foundation/components/pagination";
+
+//@import "foundation/components/pagination";
+
 // @import "foundation/components/dropdown";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
@@ -31,8 +36,11 @@
 // @import "foundation/components/accordion";
 // @import "foundation/components/tabs";
 // @import "foundation/components/orbit";
+
 @import "foundation/components/thumbs";
 @import "foundation/components/clearing";
 @import "foundation/components/flex-video";
 
+
 @import "custom";
+@import "../../css/prism.css";
