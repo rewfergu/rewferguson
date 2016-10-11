@@ -146,7 +146,23 @@
       "status": 1,
       "image": "/img/Weather-Lamp/header.svg",
       "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself.",
-      "tags": ["processing"],
+      "tags": ["processing"]
     },
+    "hangman": {
+      "name": "Hangman",
+      "status": 1,
+      "description": "An online version of the hangman game with user authentication, single player and real time multiplayer capabilities."
+    },
+    "franktank": {
+      "name": "The Frank Tank",
+      "status": 1,
+      "description": "YouTube player application that curates sports videos and allows users to comment on and favorite time based segments."
+    },
+    "sounddeck": {
+      "name": "SoundDeck",
+      "status": 1,
+      "description": "A community dj app based on the soundcloud api allowing users to enter rooms, curate playlists, and vote on the best tracks.",
+      "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"]
+    }
   }
 }
