@@ -117,7 +117,7 @@
     "todoredo": {
       "name": "TodoRedo",
       "status": 1,
-      "image": "/img/todoredo/todoredo2.png",
+      "image": "/img/TodoRedo/todoredo2.png",
       "description": "A simple todo list built in React and Firebase. I’ve never made one, so I wanted to try one as a test. The only aspect of this app that I haven’t seen anywhere else is I wanted a daily list that would reset itself each day. I have items that I would like to check off each day, and the next morning be presented with a fresh list.",
       "tags": ["react", "firebase", "javascript"]
     },
@@ -162,6 +162,7 @@
     "sounddeck": {
       "name": "SoundDeck",
       "status": 1,
+      "image": "/img/sounddeck/screenshot_1080.jpg",
       "description": "A community dj app based on the soundcloud api allowing users to enter rooms, curate playlists, and vote on the best tracks.",
       "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"]
     }
