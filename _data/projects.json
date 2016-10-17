@@ -152,6 +152,7 @@
     "hangman": {
       "name": "Hangman",
       "status": 1,
+      "image": "/img/hangman/hangman.png",
       "description": "An online version of the hangman game with user authentication, single player and real time multiplayer capabilities."
     },
     "franktank": {
