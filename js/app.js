@@ -1,97 +1,100 @@
-var gridSize;
-var cols;
-var rows;
-var nodeArray = [];
-var multiplier = 2;
-var minNodeSize;
-var maxNodeSize;
+var mover;
+var maxMag;
+var maxDir;
+var origin;
+var movers = [];
+var minNodeSize = 5;
+var maxNodeSize = 20;
+var nodeCount = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(window.innerWidth, window.innerHeight);
+  origin = createVector(0,0);
+  maxDir = createVector(width/2,height/2);
+  maxMag = maxDir.mag();
+	
+	nodeCount = int((width / 80) * (height / 80));
 
-  // adjust this based on screen size
-  gridSize = 100;
+  var Mover = function() {
+    this.position = createVector(Math.random() * width, Math.random() * height);
+    this.velocity = createVector(0, 0);
+    this.acceleration = createVector(0, 0);
+    this.vector = createVector(0,0);
+		this.hitArea = 100;
+		this.size = int(random(minNodeSize, maxNodeSize));
+  };
 
-  cols = width / gridSize;
-  rows = height / gridSize;
+  Mover.prototype.update = function(xPos, yPos) {
+    var newPosition = this.vector;
 
-  // size of circles
-  maxNodeSize = width / 50;
-  minNodeSize = maxNodeSize / 2;
-
-  ellipseMode(CENTER);
-  noiseDetail(100);
-  background(0);
-  fill(255);
-  strokeWeight(1);
-  stroke('rgba(0,0,0,.5)');
-  frameRate(30);
-
-  var i = 0;
-  for (var j = 0; j < rows; j++) {
-    for (var k = 0; k < cols; k++) {
-      // set grid
-      var xPos = (k * gridSize) + gridSize / 2;
-      var yPos = (j * gridSize) + gridSize / 2;
-
-      // alter grid with noise
-      xPos *= random(1, 2);
-      yPos *= random(1, 2);
-
-      //println(xPos);
-      nodeArray[i] = new ItemNode(xPos, yPos, int(random(minNodeSize, maxNodeSize)), gridSize, i + 1);
-      i++;
+    if (xPos && yPos) {
+      newPosition = createVector(xPos, yPos);  
     }
+    
+    var dir = p5.Vector.sub(newPosition, this.position);
+    var closeness = (maxMag - dir.mag()) / maxMag;
+    dir.normalize();
+    dir.mult(closeness);
+    
+    this.acceleration = dir;
+    this.velocity.add(this.acceleration);
+    this.velocity.limit(5);
+    this.position.add(this.velocity);
+  };
+
+  Mover.prototype.display = function() {
+    fill(255);
+    strokeWeight(1);
+    ellipse(this.position.x, this.position.y, this.size, this.size);
+  };
+  
+  Mover.prototype.checkBoundary = function(connectionNode) {
+    var distance = dist(this.position.x, this.position.y, connectionNode.position.x, connectionNode.position.y);
+    if (distance < this.hitArea) {
+      strokeWeight(.25);
+      line(this.position.x, this.position.y, connectionNode.position.x, connectionNode.position.y);
+    }
+  };
+
+  Mover.prototype.checkEdges = function() {
+    if (this.position.x > windowWidth) {
+      this.position.x = 0;
+    } else if (this.position.x < 0) {
+      this.position.x = windowWidth;
+    }
+  
+    if (this.position.y > windowHeight) {
+      this.position.y = 0;
+    } else if (this.position.y < 0) {
+      this.position.y = windowHeight;
+    }
+  };
+
+  for (var i = 0; i < 200; i++) {
+    movers.push(new Mover());
   }
 }
 
 function draw() {
-  background(230);
-
-  // draw points
-  for (var i = 0; i < cols * rows; i++) {
-    nodeArray[i].display();
-  }
-
-  // draw lines
-  // iterate over each item in the array
-  for (var is = 0; is < cols * rows; is++) {
-    // for each item in the outer array, iterate over all the other elements
-    // we set the var to the above position because anything before that has already been checked
-    for (var j = is; j < cols * rows; j++) {
-      nodeArray[is].checkBoundary(nodeArray[j]);
+	background('#e6e6e6');
+  
+  
+  for (var i = 0; i < nodeCount; i++) {
+		var randX = (Math.random() * width - 40) + 20;
+		var randY = (Math.random() * height - 40) + 20
+    movers[i].update(randX, randY);
+    
+    movers[i].checkEdges();
+    movers[i].display();  
+		
+    for (var j = i; j < nodeCount; j++) {
+      movers[i].checkBoundary(movers[j]);
     }
   }
+  
+  fill(255, 0, 0);
+  //text(maxMag, 10, 10);
 }
-
-var ItemNode = function(start_x, start_y, start_size, hit_area_bounds, myPosition) {
-  this.xPos = start_x;
-  this.yPos = start_y;
-  var size = start_size;
-  var hitArea = hit_area_bounds;
-  var thisPosition = myPosition;
-
-  var frequency = 0.0025;
-  var noiseInterval = PI;
-  // var noiseInterval = 1;
-
-  this.display = function() {
-    this.xPos = map(noise(thisPosition * noiseInterval + frameCount * frequency), 0, 1, -100, width + 100);
-    this.yPos = map(noise(thisPosition * noiseInterval + 1 + frameCount * frequency), 0, 1, -100, height + 100);
-    fill(255);
-    strokeWeight(1);
-    ellipse(this.xPos, this.yPos, size, size);
-  };
-
-  this.checkBoundary = function(connectionNode) {
-    var distance = dist(this.xPos, this.yPos, connectionNode.xPos, connectionNode.yPos);
-    if (distance < hitArea) {
-      //stroke(0);
-      strokeWeight(.25);
-      line(this.xPos, this.yPos, connectionNode.xPos, connectionNode.yPos);
-    }
-  };
-};
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
