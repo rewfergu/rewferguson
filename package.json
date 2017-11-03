@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "front-matter": "^2.1.2",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-ext": "^1.0.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "marked": "^0.3.6",
+    "run-sequence": "^2.1.0"
+  },
+  "name": "nunjucks-static-site-generator",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "nunjucks": "^3.0.1",
+    "through2": "^2.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}

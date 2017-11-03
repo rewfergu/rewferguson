@@ -1,0 +1,46 @@
+<section class="wrapper projects-list">
+  <header class="project-group-heading">
+    <h1>Archived Projects</h1>
+    <nav>
+      <ul class="project-group-list">
+        {% for project in site.printProjects(site.projects, 3) %}
+          <li class="cat-item">
+            <a href="#">{{ project.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <div class="project-group">
+
+    {% for project in site.printProjects(site.projects, 3) %}
+
+      <section class="category">
+        <header class="project-heading">
+          <h2 class="category-title"><a href="#">{{ project.name }}</a></h2>
+
+          {% if project.image %}
+            <img src="{{ project.image }}" alt="project header graphic" />
+          {% endif %}
+
+          <p>{{ project.description }}</p>
+
+          {% if project.tags %}
+            <ul class="tags">
+              {% for tag in project.tags %}
+                <li class="tags__tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </header>
+        <footer class="project-group-footer">
+          <a class="button small more-btn" href="#">More</a>
+        </footer>
+      </section>
+
+    {% endfor %}
+
+  </div>
+
+</section>

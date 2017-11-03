@@ -1,0 +1,67 @@
+<!-- PROJECT INDEX -->
+<section class="wrapper project-index">
+  <header class="project-group-heading">
+
+    <h1>
+      {% if site.projects[project].status == 1 %}
+        <a href="/projects/active">Active Projects</a>
+      {% endif %}
+
+      {% if site.projects[project].status == 2 %}
+        <a href="/projects/hold">On Hold Projects</a>
+      {% endif %}
+
+      {% if site.projects[project].status == 3 %}
+        <a href="/projects/archive">Archived Projects</a>
+      {% endif %}
+    </h1>
+
+    <h2>
+      <a href="#">{{ site.projects[project].name }}</a>
+    </h2>
+
+    <nav>
+      <ul class="project-group-list">
+        {% for link in site.printLinks(project) %}
+        <li>
+          <a href="_posts/{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="project-group">
+    <section class="category">
+      <header class="project-heading">
+        <h2 class="category-title">
+          {{ site.projects[project].name }}
+        </h2>
+
+        {% if site.projects[project].image %}
+          <img src="{{ site.projects[project].image }}" alt="project header graphic" />
+        {% endif %}
+
+        <p>
+          {{ site.projects[project].description }}
+        </p>
+
+        {% if site.projects[project].tags %}
+          <ul class="tags">
+            {% for tag in site.projects[project].tags %}
+              <li class="tags__tag">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </header>
+
+      {% for link in site.printLinks(project) %}
+        {% set foo = site.renderArticle(link.url) %}
+        {% include "includes/article.html" %}
+      {% endfor %}
+
+    </section>
+  </div>
+
+</section>

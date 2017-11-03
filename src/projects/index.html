@@ -1,0 +1,10 @@
+{% set title="Project Journal" %}
+{% set description="An index of all active and inactive personal projects." %}
+
+{% extends "journal.html" %} 
+
+{% block body %}
+  {% include "projects-active.html" %}
+  {% include "projects-hold.html" %}
+  {% include "projects-archive.html" %}
+{% endblock %}
