@@ -14,18 +14,20 @@ function printProjects(obj, mode) {
   return objArray;
 }
 
-function renderArticle(url) {
-  // var frontMatter = fm(fs.readFileSync(url, 'utf8'));
-  // var pageContent = marked(fs.readFileSync(url, 'utf8'));
+function renderArticle(folder, link) {
+  var url = link.url.replace(/html$/, 'md');
+  var filePath = `src/projects/${folder}/posts/${url}`;
+  var fileContents = fs.readFileSync(filePath, 'utf8');
+
+  var frontMatter = fm(fileContents);
+  var pageContent = marked(frontMatter.body);
 
   // console.log('page content', pageContent);
 
-  // return {
-  //   metadata: frontMatter.attributes,
-  //   content: pageContent
-  // };
-
-  console.log('hello', url);
+  return {
+    metadata: frontMatter.attributes,
+    content: pageContent
+  };
 }
 
 function printLinks(folder) {

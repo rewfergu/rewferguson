@@ -57,7 +57,7 @@
       </header>
 
       {% for link in site.printLinks(project) %}
-        {% set foo = site.renderArticle(link.url) %}
+        {% set article = site.renderArticle(project, link) %}
         {% include "includes/article.html" %}
       {% endfor %}
 
