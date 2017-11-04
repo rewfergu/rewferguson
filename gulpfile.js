@@ -138,7 +138,8 @@ gulp.task('serve', ['renderTemplates', 'renderMarkdown', 'sass', 'js'], function
   });
 
   gulp.watch('src/scss/*.scss', ['sass']);
-
+  gulp.watch('templates/**/*.html', ['renderTemplates']);
+  gulp.watch('src/**/*.md', ['renderMarkdown']);
   gulp.watch('dist/**/*.html').on('change', browserSync.reload);
 });
 

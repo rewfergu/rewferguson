@@ -2,13 +2,23 @@
 title: Camera Setups
 template: post.html
 ---
-{% include figure.html src="https://s3.amazonaws.com/rewferguson.com/img/Raspberry-Pi-Video-Camera/piCamera-with-bluetooth-keyboard.jpg" alt="Camera with Bluetooth keyboard and HDMI monitor" caption="Camera with Bluetooth keyboard and HDMI monitor" %}
+<figure>
+  <img src="https://s3.amazonaws.com/rewferguson.com/img/Raspberry-Pi-Video-Camera/piCamera-with-bluetooth-keyboard.jpg" alt="Camera with Bluetooth keyboard and HDMI monitor" />
+  <figcaption>
+    Camera with Bluetooth keyboard and HDMI monitor
+  </figcaption>
+</figure>
 
 ## Raspberry Pi + Bluetooth Keyboard & Monitor
 
 I can use bluetooth and hdmi on the Pi itself for running commands and monitoring video.  The iPhone hotspot would be a convenient way to get files in and out.  I could send files to the MacBook for editing using the iPhone as a portable, battery powered router.
 
-{% include figure.html src="https://s3.amazonaws.com/rewferguson.com/img/Raspberry-Pi-Video-Camera/piCamera-with-ipad.jpg" alt="camera image" caption="Camera with iPhone and iPad" %}
+<figure>
+  <img src="https://s3.amazonaws.com/rewferguson.com/img/Raspberry-Pi-Video-Camera/piCamera-with-ipad.jpg" alt="camera image" />
+  <figcaption>
+    Camera with iPhone and iPad
+  </figcaption>
+</figure>
 
 ## Raspberry Pi + iPad
 

@@ -31,8 +31,8 @@ function renderArticle(url) {
 function printLinks(folder) {
   var links = [];
 
-  fs.readdirSync(`src/projects/${folder}/_posts`).forEach(function(link) {
-    var filePath = `src/projects/${folder}/_posts/${link}`;
+  fs.readdirSync(`src/projects/${folder}/posts`).forEach(function(link) {
+    var filePath = `src/projects/${folder}/posts/${link}`;
     // console.log('link', filePath);
 
     var frontMatter = fm(fs.readFileSync(filePath, 'utf8'));

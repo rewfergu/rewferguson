@@ -12,7 +12,8 @@ I added a react animation test to CodePen. I wanted to test out the possibility 
 
 I referenced the elements using the *ref* attribute and passing in a custom *position* prop. I incremented the position prop at render and was able to use it to delay the animation trigger.
 
-{% highlight jsx %}
+<pre>
+<code class="language-jsx">
 render() {
   var _this = this;
   return (
@@ -27,7 +28,8 @@ render() {
     </div>
   );
 }
-{% endhighlight %}
+</code>
+</pre>
 
 <p data-height="600" data-theme-id="21445" data-slug-hash="PZyLMj" data-default-tab="result" data-user="rewfergu" class='codepen'>See the Pen <a href='http://codepen.io/rewfergu/pen/PZyLMj/'>React with GSAP</a> by rewfergu (<a href='http://codepen.io/rewfergu'>@rewfergu</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
