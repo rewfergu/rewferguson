@@ -5,7 +5,7 @@
       <ul class="project-group-list">
         {% for project in site.printProjects(site.projects, 1) %}
           <li class="cat-item">
-            <a href="#">{{ project.name }}</a>
+            {{ site.printProjectLink(project) | safe }}
           </li>
         {% endfor %}
       </ul>

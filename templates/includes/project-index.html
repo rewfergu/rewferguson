@@ -16,16 +16,22 @@
       {% endif %}
     </h1>
 
-    <h2>
-      <a href="#">{{ site.projects[project].name }}</a>
-    </h2>
+    {# <nav>
+      <ul class="project-group-list">
+        {% for post in site.getProjectPosts(project) %}
+        <li>
+          {{ site.printPostLink(project, post) | safe }}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav> #}
 
     <nav>
       <ul class="project-group-list">
-        {% for link in site.printLinks(project) %}
-        <li>
-          <a href="posts/{{ link.url }}">{{ link.title }}</a>
-        </li>
+        {% for proj in site.printProjects(site.projects, 1) %}
+          <li class="cat-item">
+            {{ site.printProjectLink(proj, project) | safe }}
+          </li>
         {% endfor %}
       </ul>
     </nav>
@@ -56,8 +62,8 @@
         {% endif %}
       </header>
 
-      {% for link in site.printLinks(project) %}
-        {% set article = site.renderArticle(project, link) %}
+      {% for post in site.getProjectPosts(project) %}
+        {% set article = site.renderArticle(project, post) %}
         {% include "includes/article.html" %}
       {% endfor %}
 
