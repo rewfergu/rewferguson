@@ -1,15 +1,13 @@
 <article class="post">
-  <header class="entry-header">
-    <h1 class="entry-title">
+  <header class="post__header">
+    <h1 class="post__title">
       <a href="{{ article.metadata.url }}">
         {{ article.metadata.title}}
       </a>
     </h1>
-    <div class="entry-meta">
-      <span class="posted-on">{{ article.metadata.date }}</span>
-    </div>
+    <div class="post__meta">{{ article.metadata.date }}</div>
   </header>
-  <div class="entry-content">
+  <div class="post__content">
     {{ article.content|safe }}
   </div>
 </article>

@@ -21,6 +21,8 @@ function renderArticle(folder, link) {
   var frontMatter = fm(fileContents);
   var pageContent = marked(frontMatter.body);
 
+  frontMatter.attributes.url = `posts/${link.replace(/md$/, 'html')}`;
+
   return {
     metadata: frontMatter.attributes,
     content: pageContent

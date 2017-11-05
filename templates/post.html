@@ -1,42 +1,45 @@
 {% extends "journal.html" %} 
 
+{% block sidebar %}
+  <header class="projectList">
+
+    <h1 class="projectList__heading">
+      {% if site.projects[project].status == 1 %}
+        <a href="/projects/active">Active Projects</a>
+      {% endif %}
+
+      {% if site.projects[project].status == 2 %}
+        <a href="/projects/hold">On Hold Projects</a>
+      {% endif %}
+
+      {% if site.projects[project].status == 3 %}
+        <a href="/projects/archive">Archived Projects</a>
+      {% endif %}
+    </h1>
+
+    <nav>
+      <ul>
+        {% for proj in site.printProjects(site.projects, 1) %}
+          <li>{{ site.printProjectLink(proj, project) | safe }}</li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </header>
+{% endblock %}
+
+
 {% block body %}
-
   <div class="single">
-  {# <h1 class="category-titles">
-    {% if page.categories[1] == "active" %}
-      {% for cat in site.data.projects-active.categories %}
-        {% if cat.cat == page.categories[2] %}
-          {{ cat.name }}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  </h1> #}
+    <article class="post">
+      <header class="post__header">
+        <h1 class="post__title">{{ title }}</h1>
+        <div class="post__meta">{{ page.date }}</p>
+      </header>
 
-  <article class="post">
-    <header class="entry-header">
-      <h1 class="entry-title">{{ title }}</h1>
-      {# <p class="entry-meta">{{ page.date | date: "%b %-d, %Y" }}</p> #}
-    </header>
-    <div class="entry-content">
-
-      {{ body | safe}}
-
-    </div>
-    <!-- <footer class="entry-footer">Footer Links</footer> -->
-  </article>
-
-  <!-- <nav class="navigation post-navigation" role="navigation">
-    <div class="nav-links">
-      <div class="nav-previous">
-        <a href="{{ page.previous.url }}" rel="prev">{{ page.previous.title }}</a>
+      <div class="post__content">
+        {{ body | safe}}
       </div>
-      <div class="nav-next">
-        <a href="{{ page.next.url }}" rel="next">{{ page.next.title }}</a>
-      </div>
-    </div>
-  </nav> -->
-
+    </article>
   </div>
-
 {% endblock %}

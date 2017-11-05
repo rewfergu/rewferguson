@@ -11,8 +11,15 @@
     </header>
 
     <div class="journal__content">
+      <div class="journal__sidebar">
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+
+      <main id="main" class="journal__main" role="main">
         {% block body %}
         {% endblock %}
+      </main>
     </div>
   </div>
 

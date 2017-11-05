@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "foundation-sites": "^6.4.4-rc1",
     "front-matter": "^2.1.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",
     "gulp-ext": "^1.0.0",
     "gulp-nunjucks": "^3.0.0",

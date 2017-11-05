@@ -1,24 +1,21 @@
-<section class="wrapper projects-list">
-  <header class="project-group-heading">
+<section class="projectCategory">
+  <header class="projectCategory__heading projectList">
     <h1>Active Projects</h1>
     <nav>
-      <ul class="project-group-list">
+      <ul>
         {% for project in site.printProjects(site.projects, 1) %}
-          <li class="cat-item">
-            {{ site.printProjectLink(project) | safe }}
-          </li>
+          <li>{{ site.printProjectLink(project) | safe }}</li>
         {% endfor %}
       </ul>
     </nav>
   </header>
 
-  <div class="project-group">
-
+  <div class="projectCategory__content">
     {% for project in site.printProjects(site.projects, 1) %}
 
-      <section class="category">
-        <header class="project-heading">
-          <h2 class="category-title"><a href="/projects/{{ project.folder }}">{{ project.name }}</a></h2>
+      <section class="project">
+        <header class="project__heading">
+          <h2 class="project__title"><a href="/projects/{{ project.folder }}">{{ project.name }}</a></h2>
 
           {% if project.image %}
             <img src="{{ project.image }}" alt="project header graphic" />
@@ -27,20 +24,18 @@
           <p>{{ project.description }}</p>
 
           {% if project.tags %}
-            <ul class="tags">
+            <ul class="project__tags">
               {% for tag in project.tags %}
-                <li class="tags__tag">{{ tag }}</li>
+                <li class="project__tag">{{ tag }}</li>
               {% endfor %}
             </ul>
           {% endif %}
         </header>
-        <footer class="project-group-footer">
+        <footer class="project__footer">
           <a class="button small more-btn" href="/projects/{{ project.folder }}">More</a>
         </footer>
       </section>
 
     {% endfor %}
-
   </div>
-
 </section>

@@ -1,8 +1,9 @@
-<!-- PROJECT INDEX -->
-<section class="wrapper project-index">
-  <header class="project-group-heading">
+{% extends "project.html" %} 
 
-    <h1>
+{% block sidebar %}
+  <header class="projectList">
+
+    <h1 class="projectList__heading">
       {% if site.projects[project].status == 1 %}
         <a href="/projects/active">Active Projects</a>
       {% endif %}
@@ -16,58 +17,46 @@
       {% endif %}
     </h1>
 
-    {# <nav>
-      <ul class="project-group-list">
-        {% for post in site.getProjectPosts(project) %}
-        <li>
-          {{ site.printPostLink(project, post) | safe }}
-        </li>
-        {% endfor %}
-      </ul>
-    </nav> #}
-
     <nav>
-      <ul class="project-group-list">
+      <ul>
         {% for proj in site.printProjects(site.projects, 1) %}
-          <li class="cat-item">
-            {{ site.printProjectLink(proj, project) | safe }}
-          </li>
+          <li>{{ site.printProjectLink(proj, project) | safe }}</li>
         {% endfor %}
       </ul>
     </nav>
 
   </header>
+{% endblock %}
 
-  <div class="project-group">
-    <section class="category">
-      <header class="project-heading">
-        <h2 class="category-title">
-          {{ site.projects[project].name }}
-        </h2>
 
-        {% if site.projects[project].image %}
-          <img src="{{ site.projects[project].image }}" alt="project header graphic" />
-        {% endif %}
+{% block body %}
+  <section class="project">
+    <header class="project__heading">
+      <h2 class="project__title">
+        {{ site.projects[project].name }}
+      </h2>
 
-        <p>
-          {{ site.projects[project].description }}
-        </p>
+      {% if site.projects[project].image %}
+        <img src="{{ site.projects[project].image }}" alt="project header graphic" />
+      {% endif %}
 
-        {% if site.projects[project].tags %}
-          <ul class="tags">
-            {% for tag in site.projects[project].tags %}
-              <li class="tags__tag">{{ tag }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </header>
+      <p>
+        {{ site.projects[project].description }}
+      </p>
 
-      {% for post in site.getProjectPosts(project) %}
-        {% set article = site.renderArticle(project, post) %}
-        {% include "includes/article.html" %}
-      {% endfor %}
+      {% if site.projects[project].tags %}
+        <ul class="project__tags">
+          {% for tag in site.projects[project].tags %}
+            <li class="project__tag">{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </header>
 
-    </section>
-  </div>
+    {% for post in site.getProjectPosts(project) %}
+      {% set article = site.renderArticle(project, post) %}
+      {% include "includes/article.html" %}
+    {% endfor %}
 
-</section>
+  </section>
+{% endblock %}

@@ -11,6 +11,7 @@ const through = require('through2');
 const siteData = require('./site.json');
 const siteFunctions = require('./site_functions.js');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
 var path = require('path');
@@ -56,38 +57,38 @@ Object.assign(siteData, siteFunctions);
 
 gulp.task('renderMarkdown', () =>
   gulp
-  .src('src/**/*.md')
-  .pipe(
-    data(function(file) {
-      var content = fm(String(file.contents));
-      file.contents = new Buffer(
-        marked(content.body, {
-          renderer: renderer
-        })
-      );
-      return content.attributes;
-    })
-  )
-  .pipe(
-    data(function(file) {
-      // console.log("data", file.data);
-      // console.log("contents", file.contents.toString());
+    .src('src/**/*.md')
+    .pipe(
+      data(function(file) {
+        var content = fm(String(file.contents));
+        file.contents = new Buffer(
+          marked(content.body, {
+            renderer: renderer
+          })
+        );
+        return content.attributes;
+      })
+    )
+    .pipe(
+      data(function(file) {
+        // console.log("data", file.data);
+        // console.log("contents", file.contents.toString());
 
-      const md = file.contents.toString();
-      file.contents = fs.readFileSync(
-        path.resolve(__dirname, 'templates', file.data.template)
-      );
-      //file.contents = Buffer.from(file.data.template);
+        const md = file.contents.toString();
+        file.contents = fs.readFileSync(
+          path.resolve(__dirname, 'templates', file.data.template)
+        );
+        //file.contents = Buffer.from(file.data.template);
 
-      return Object.assign({}, file.data, {
-        body: md,
-        site: siteData
-      });
-    })
-  )
-  .pipe(renderMarkdown())
-  .pipe(ext.replace('html'))
-  .pipe(gulp.dest('dist'))
+        return Object.assign({}, file.data, {
+          body: md,
+          site: siteData
+        });
+      })
+    )
+    .pipe(renderMarkdown())
+    .pipe(ext.replace('html'))
+    .pipe(gulp.dest('dist'))
 );
 
 gulp.task('renderTemplates', () => {
@@ -132,24 +133,41 @@ function renderMarkdown() {
   });
 }
 
-gulp.task('serve', ['renderTemplates', 'renderMarkdown', 'sass', 'js'], function() {
-  browserSync.init({
-    server: './dist'
-  });
+gulp.task(
+  'serve',
+  ['renderTemplates', 'renderMarkdown', 'sass', 'js'],
+  function() {
+    browserSync.init({
+      server: './dist'
+    });
 
-  gulp.watch('src/scss/*.scss', ['sass']);
-  gulp.watch('templates/**/*.html', ['renderTemplates']);
-  gulp.watch('src/**/*.md', ['renderMarkdown']);
-  gulp.watch('dist/**/*.html').on('change', browserSync.reload);
-});
+    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch(
+      ['src/**/*.html', 'templates/**/*.html'],
+      ['renderTemplates', 'renderMarkdown']
+    );
+    gulp.watch('src/**/*.md', ['renderMarkdown', 'renderTemplates']);
+    gulp.watch('dist/**/*.html').on('change', browserSync.reload);
+  }
+);
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
   return gulp
     .src(['src/scss/style.scss', 'src/scss/journal.scss'])
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css'));
-  // .pipe(browserSync.stream());
+    .pipe(
+      sass({
+        includePaths: ['node_modules']
+      })
+    )
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      })
+    )
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
