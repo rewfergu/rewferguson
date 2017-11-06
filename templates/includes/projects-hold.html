@@ -15,7 +15,15 @@
 
       <section class="project">
         <header class="project__heading">
-          <h2 class="project__title"><a href="/projects/{{ project.folder }}">{{ project.name }}</a></h2>
+          {% if site.projects[project].image %}
+            {% set titleClass = "project__title" %}
+          {% else %}
+            {% set titleClass = "project__title emphasis" %}
+          {% endif %}
+
+          <h2 class="{{ titleClass }}">
+            <a href="/projects/{{ project.folder }}">{{ project.name }}</a>
+          </h2>
 
           {% if project.image %}
             <img src="{{ project.image }}" alt="project header graphic" />

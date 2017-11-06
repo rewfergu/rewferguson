@@ -19,7 +19,7 @@
 
     <nav>
       <ul>
-        {% for proj in site.printProjects(site.projects, 1) %}
+        {% for proj in site.printProjects(site.projects, site.projects[project].status) %}
           <li>{{ site.printProjectLink(proj, project) | safe }}</li>
         {% endfor %}
       </ul>
@@ -32,7 +32,13 @@
 {% block body %}
   <section class="project">
     <header class="project__heading">
-      <h2 class="project__title">
+      {% if site.projects[project].image %}
+        {% set titleClass = "project__title" %}
+      {% else %}
+        {% set titleClass = "project__title emphasis" %}
+      {% endif %}
+      
+      <h2 class="{{ titleClass }}">
         {{ site.projects[project].name }}
       </h2>
 
