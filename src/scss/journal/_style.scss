@@ -115,14 +115,22 @@ figure {
 }
 
 .projectCategory {
-  display: flex;
   width: 100%;
-  flex-shrink: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .projectCategory__heading {
   background: hsla(0, 50%, 35%, 1);
-  min-width: 300px;
+  // min-width: 300px;
+
+  flex: 1 1 100%;
+  order: 2;
+  @include breakpoint(748px) {
+    flex: 0 0 300px; 
+    order: 1;
+  }
+
   ul {
     list-style: none;
     margin: 0;
@@ -134,25 +142,38 @@ figure {
   width: auto;
   column-gap: 1rem;
   overflow: hidden;
-  @media #{$medium-up} {
+  order: 1;
+  background: #ccc;
+
+  .project {
+    margin: 0;
+  }
+
+  @media (min-width: 748px) {
+    flex: 1 1 400px;
+    order: 2;
+    column-count: 1;
     padding: 1rem;
+    .project {
+      margin-bottom: 1rem;
+    }
   }
-  @media #{$medium-only} {
-    -webkit-column-count: 1;
+
+  @include breakpoint(large) {
+    column-count: 2;
   }
-  @media #{$large-only} {
-    -webkit-column-count: 2;
+
+  @include breakpoint(xlarge) {
+    column-count: 3;
   }
-  @media #{$xlarge-only} {
-    -webkit-column-count: 3;
-  }
-  @media #{$xxlarge-up} {
-    -webkit-column-count: 4;
+
+  @include breakpoint(xxlarge) {
+    column-count: 4;
   }
 }
 
 // heading modifications
-.projectCategory:nth-child(2) {
+.projectCategory.hold {
   .projectCategory__heading {
     background: hsla(0, 50%, 25%, 1);
   }
@@ -160,7 +181,7 @@ figure {
     background: hsla(0, 0%, 0%, .1);
   }
 }
-.projectCategory:nth-child(3) {
+.projectCategory.archive {
   .projectCategory__heading {
     background: hsla(0, 50%, 15%, 1);
   }
