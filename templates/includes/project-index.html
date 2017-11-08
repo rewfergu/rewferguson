@@ -50,6 +50,10 @@
         {{ site.projects[project].description }}
       </p>
 
+      {% if site.projects[project].github %}
+        <p><a href="{{ site.projects[project].github }}">{{ site.projects[project].github }}</a></p>
+      {% endif %}
+
       {% if site.projects[project].tags %}
         <ul class="project__tags">
           {% for tag in site.projects[project].tags %}

@@ -31,6 +31,10 @@
 
           <p>{{ project.description }}</p>
 
+          {% if project.github %}
+            <p><a href="{{ project.github }}">{{ project.github }}</a></p>
+          {% endif %}
+
           {% if project.tags %}
             <ul class="project__tags">
               {% for tag in project.tags %}

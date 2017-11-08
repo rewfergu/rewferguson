@@ -15,7 +15,7 @@
 
       <section class="project">
         <header class="project__heading">
-          {% if site.projects[project].image %}
+          {% if project.image %}
             {% set titleClass = "project__title" %}
           {% else %}
             {% set titleClass = "project__title emphasis" %}
@@ -30,6 +30,10 @@
           {% endif %}
 
           <p>{{ project.description }}</p>
+
+          {% if project.github %}
+            <p><a href="{{ project.github }}">{{ project.github }}</a></p>
+          {% endif %}
 
           {% if project.tags %}
             <ul class="project__tags">

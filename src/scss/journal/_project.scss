@@ -12,15 +12,18 @@
   break-inside: avoid;
   // margin-bottom: 1rem;
   padding: 1rem;
+
   @media #{$medium-up} {
     padding: 2rem 2rem 1rem;
     margin: 0 auto;
   }
+
   p {
     display: block;
     border-radius: 5px;
     background: rgba(255, 255, 255, .3);
     margin: 1rem 0;
+
     img {
       max-width: 100%;
       box-sizing: border-box;
