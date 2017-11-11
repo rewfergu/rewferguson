@@ -32,7 +32,21 @@
           <p>{{ project.description }}</p>
 
           {% if project.github %}
-            <p><a href="{{ project.github }}">{{ project.github }}</a></p>
+            <p>
+              <a class="project__github" href="{{ project.github }}">
+                <svg><use xlink:href="/img/icons.svg#icon-github"></use></svg>
+                {{ site.trimGithub(project.github) }}
+              </a>
+            </p>
+          {% endif %}
+
+          {% if project.link %}
+            <p>
+              <a class="project__link" href="{{ project.link }}">
+                <svg><use xlink:href="/img/icons.svg#icon-link"></use></svg>
+                {{ site.trimLink(project.link) }}
+              </a>
+            </p>
           {% endif %}
 
           {% if project.tags %}

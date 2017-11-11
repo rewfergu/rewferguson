@@ -56,6 +56,19 @@
   }
 }
 
+.project__github,
+.project__link {
+  display: flex;
+
+  svg {
+    fill: #862d2d;
+    height: 1.3rem;
+    width: 1.3rem;
+    display: block;
+    margin-right: 0.5rem;
+  }
+}
+
 .project__tags {
   list-style: none;
   margin: 0 0 1rem;
@@ -67,6 +80,7 @@
   // display: inline-block;
   background: #efefef;
   border-radius: 5px;
+  margin-bottom: 5px;
   // font-size: 0.75rem;
   // padding: 2px 10px;
 }

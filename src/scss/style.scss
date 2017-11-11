@@ -41,6 +41,21 @@ header nav ul li {
 header nav ul li a {
   color: #862d2d;
   text-decoration: none;
+  display: flex;
+  &:hover,
+  &:focus {
+    color: #222;
+    svg {
+      fill: #222;
+    }
+  }
+  svg {
+    fill: #862d2d;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: block;
+    margin-right: 1rem;
+  }
 }
 
 

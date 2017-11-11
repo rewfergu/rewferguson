@@ -74,10 +74,20 @@ function printLinks(folder) {
   return links;
 }
 
+function trimGithub(str) {
+  return str.substr(19);
+}
+
+function trimLink(str) {
+  return str.replace(/^http[s]*:\/\//, '');
+}
+
 module.exports = {
   printProjects,
   getProjectPosts,
   renderArticle,
   printProjectLink,
-  printPostLink
+  printPostLink,
+  trimGithub,
+  trimLink
 };

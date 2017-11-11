@@ -149,7 +149,8 @@
       "image": "https://s3.amazonaws.com/rewferguson.com/img/TodoRedo/todoredo2.png",
       "description": "A simple todo list built in React and Firebase. I’ve never made one, so I wanted to try one as a test. The only aspect of this app that I haven’t seen anywhere else is I wanted a daily list that would reset itself each day. I have items that I would like to check off each day, and the next morning be presented with a fresh list.",
       "tags": ["react", "firebase", "javascript"],
-      "github": "https://github.com/rewfergu/todoredo"
+      "github": "https://github.com/rewfergu/todoredo",
+      "link": "https://todoredo.firebaseapp.com"
     },
     "udacity-arcade-game-project": {
       "name": "Udacity Arcade Game Project",
