@@ -198,7 +198,8 @@
       "name": "The Frank Tank",
       "folder": "franktank",
       "status": 1,
-      "description": "YouTube player application that curates sports videos and allows users to comment on and favorite time based segments."
+      "description": "YouTube player application that curates sports videos and allows users to comment on and favorite time based segments.",
+      "github": "https://github.com/rubber-duckies/the-frank-tank"
     },
     "sounddeck": {
       "name": "SoundDeck",
@@ -206,7 +207,8 @@
       "status": 1,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/sounddeck/screenshot_1080.jpg",
       "description": "A community dj app based on the soundcloud api allowing users to enter rooms, curate playlists, and vote on the best tracks.",
-      "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"]
+      "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"],
+      "github": "https://github.com/SoundlyEnthused/SoundDeck"
     }
   }
 }

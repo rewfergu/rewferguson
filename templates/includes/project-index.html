@@ -59,7 +59,7 @@
         </p>
       {% endif %}
 
-      {% if project.link %}
+      {% if site.projects[project].link %}
         <p>
           <a class="project__link" href="{{ site.projects[project].link }}">
             <svg><use xlink:href="/img/icons.svg#icon-link"></use></svg>

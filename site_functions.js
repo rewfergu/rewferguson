@@ -32,7 +32,7 @@ function renderArticle(folder, link) {
 // return an array of posts inside the project folder
 function getProjectPosts(folder) {
   const posts = fs.readdirSync(`src/projects/${folder}/posts`);
-  return posts;
+  return posts.reverse();
 }
 
 // return an anchor tag with the post link

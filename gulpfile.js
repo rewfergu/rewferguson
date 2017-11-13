@@ -89,13 +89,15 @@ gulp.task('renderMarkdown', () =>
     .pipe(renderMarkdown())
     .pipe(ext.replace('html'))
     .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream())
 );
 
 gulp.task('renderTemplates', () => {
   return gulp
     .src('src/**/*.html')
     .pipe(renderNunjucks())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
 });
 
 const env = new nunjucks.Environment(
