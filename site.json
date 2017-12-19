@@ -98,7 +98,7 @@
     "photo-scramble": {
       "name": "Photo Scramble",
       "folder": "photo-scramble",
-      "status": 1,
+      "status": 3,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Photo-Scramble/header.png",
       "description": "A basic photo scramble game. I wanted to design a project in javascript that I could then wrap in PhoneGap and try to access the camera roll to play a game.",
       "tags": ["javascript", "jquery"],
@@ -114,7 +114,7 @@
     "quadcopter": {
       "name": "Quadcopter",
       "folder": "quadcopter",
-      "status": 1,
+      "status": 2,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Quadcopter/header.svg",
       "description": "I'm trying to build a quadcopter, and learning about each piece as I go.",
       "tags": ["arduino", "node", "raspberry pi", "johnny five"]
@@ -181,7 +181,7 @@
     "weather-lamp": {
       "name": "Weather Lamp",
       "folder": "weather-lamp",
-      "status": 1,
+      "status": 2,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Weather-Lamp/header.svg",
       "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself.",
       "tags": ["processing"]
