@@ -10,6 +10,7 @@
     "gulp-nunjucks": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "marked": "^0.3.6",
+    "node-sass": "^4.7.2",
     "run-sequence": "^2.1.0"
   },
   "name": "nunjucks-static-site-generator",

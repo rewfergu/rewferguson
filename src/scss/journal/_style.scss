@@ -167,9 +167,9 @@ figure {
     column-count: 3;
   }
 
-  @include breakpoint(xxlarge) {
-    column-count: 4;
-  }
+  // @include breakpoint(xxlarge) {
+  //   column-count: 4;
+  // }
 }
 
 // heading modifications
