@@ -35,7 +35,7 @@
             <p>
               <a class="project__github" href="{{ project.github }}">
                 <svg><use xlink:href="/img/icons.svg#icon-github"></use></svg>
-                {{ project.github }}
+                {{ site.trimGithub(project.github) }}
               </a>
             </p>
           {% endif %}
