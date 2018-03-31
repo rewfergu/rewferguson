@@ -12,7 +12,7 @@
     "branches": {
       "name": "branches",
       "folder": "branches",
-      "status": 1,
+      "status": 3,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Branches/output.png",
       "description": "Randomly generated artwork created in Processing. Processing takes an SVG file with tiles inside and arranges them on a grid in random order so the white curves connect from tile to tile. For the most part.",
       "tags": ["svg", "processing"],
@@ -21,7 +21,7 @@
     "budget-tracker": {
       "name": "Budget Tracker",
       "folder": "budget-tracker",
-      "status": 1,
+      "status": 2,
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Budget-Tracker/sample.png",
       "description": "A mobile application used to track expenses. Built in AngularJS with a Firebase backend.",
       "tags": ["angular", "firebase", "javascript"],
@@ -51,7 +51,8 @@
       "image": "https://s3.amazonaws.com/rewferguson.com/img/flipDraw/header.png",
       "description": "Simple two player drawing and guessing game using JavaScript.  One player has a blank drawing canvas and the other player has scrambled letter tiles.  As the first player draws the second player guesses the drawing by assembling the tiles.",
       "tags": ["svg", "paperjs", "canvas", "firebase", "javascript", "jquery", "jquery ui", "mobile"],
-      "github": "https://github.com/rewfergu/flipDraw"
+      "github": "https://github.com/rewfergu/flipDraw",
+      "link": ""
     },
     "frame-squeezer": {
       "name": "Frame Squeezer",
@@ -61,6 +62,21 @@
       "description": "I really liked the movie barcode images on Tumblr, and I’ve been trying to figure out a way to approximate that type of image using Processing.",
       "tags": ["processing"],
       "github": "https://github.com/rewfergu/frameSqueezer"
+    },
+    "franktank": {
+      "name": "The Frank Tank",
+      "folder": "franktank",
+      "status": 1,
+      "description": "YouTube player application that curates sports videos and allows users to comment on and favorite time based segments.",
+      "github": "https://github.com/rubber-duckies/the-frank-tank"
+    },
+    "hangman": {
+      "name": "Hangman",
+      "folder": "hangman",
+      "status": 2,
+      "image": "https://s3.amazonaws.com/rewferguson.com/img/hangman/hangman.png",
+      "description": "An online version of the hangman game with user authentication, single player and real time multiplayer capabilities.",
+      "github": "https://github.com/rewfergu/hangman"
     },
     "ipad-stand": {
       "name": "iPad Stand",
@@ -87,6 +103,16 @@
       "status": 2,
       "description": "Some controls in Logic are just easier if you have a physical knob or control to manipulate. Assigning them is pretty easy in the software, I just need to create some knobs to assign. Arduino can output this info in MIDI.",
       "tags": ["arduino", "midi"]
+    },
+    "notecode": {
+      "name": "Notecode",
+      "folder": "notecode",
+      "status": 1,
+      "image": "",
+      "description": "A note taking app build on react, mongo and CodeMirror",
+      "tags": ["codemirror", "react", "mongo", "jest"],
+      "github": "https://github.com/rewfergu/notecode",
+      "link": ""
     },
     "octopus": {
       "name": "Octopus",
@@ -129,9 +155,18 @@
     "raspberry-pi-video-camera": {
       "name": "Raspberry Pi Video Camera",
       "folder": "raspberry-pi-video-camera",
-      "status": 1,
+      "status": 2,
       "description": "I used to have a pretty big collection of vintage cameras, although its quite a bit smaller these days. I purchased a really cool Canon super 8 camera with sound the other day and I’ve been trying to figure out to breathe new life into it. I imagined that if I could find a way to modify the Raspberry Pi camera module and fit it inside the case, there would be enough room inside the film compartment for the rest of the Raspberry Pi’s electronics. I’d have a Raspberry Pi powered camera inside a cool vintage super 8 case.",
       "tags": ["raspberry pi", "python"]
+    },
+    "sounddeck": {
+      "name": "SoundDeck",
+      "folder": "sounddeck",
+      "status": 1,
+      "image": "https://s3.amazonaws.com/rewferguson.com/img/sounddeck/screenshot_1080.jpg",
+      "description": "A community dj app based on the soundcloud api allowing users to enter rooms, curate playlists, and vote on the best tracks.",
+      "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"],
+      "github": "https://github.com/SoundlyEnthused/SoundDeck"
     },
     "timer": {
       "name": "Timer",
@@ -185,30 +220,6 @@
       "image": "https://s3.amazonaws.com/rewferguson.com/img/Weather-Lamp/header.svg",
       "description": "I picked an office with no windows, so I’m stuck with artificial light only while I work. I’d like some ambient light provided with RGB LEDs that change their color temperature based on the local weather outside. I’m sure there are lamps that do this, but I would like the light more integrated into my work area. Not one single spot of colored light, but an overall ambient glow. I figure to get this effect I would have to build something myself.",
       "tags": ["processing"]
-    },
-    "hangman": {
-      "name": "Hangman",
-      "folder": "hangman",
-      "status": 1,
-      "image": "https://s3.amazonaws.com/rewferguson.com/img/hangman/hangman.png",
-      "description": "An online version of the hangman game with user authentication, single player and real time multiplayer capabilities.",
-      "github": "https://github.com/rewfergu/hangman"
-    },
-    "franktank": {
-      "name": "The Frank Tank",
-      "folder": "franktank",
-      "status": 1,
-      "description": "YouTube player application that curates sports videos and allows users to comment on and favorite time based segments.",
-      "github": "https://github.com/rubber-duckies/the-frank-tank"
-    },
-    "sounddeck": {
-      "name": "SoundDeck",
-      "folder": "sounddeck",
-      "status": 1,
-      "image": "https://s3.amazonaws.com/rewferguson.com/img/sounddeck/screenshot_1080.jpg",
-      "description": "A community dj app based on the soundcloud api allowing users to enter rooms, curate playlists, and vote on the best tracks.",
-      "tags": ["react", "bootstrap", "socket.io", "express", "node", "soundcloud"],
-      "github": "https://github.com/SoundlyEnthused/SoundDeck"
     }
   }
 }

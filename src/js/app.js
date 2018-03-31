@@ -1,110 +1,243 @@
-var mover;
-var maxMag;
-var maxDir;
-var origin;
-var movers = [];
-var minNodeSize = 5;
-var maxNodeSize = 20;
-var nodeCount = 0;
+var gridBlock = 50;
+var x = gridBlock / 2;
+var y = 0;
+var translate_x;
+var translate_y;
+var angle;
+var angleOffset = 0;
+var flipFlop = 1;
+
+var currentPath = 3;
+// 0 = up
+// 1 = right
+// 2 = down
+// 3 = left
+
+var previousAnchor = 0;
+// 0 = topleft
+// 1 = topright
+// 2 = bottomright
+// 3 = bottomleft
+
+var updown = [0, 2];
+var leftright = [1, 3];
+
+var currentRotation = [1, -1]; // 1 = clockwise, -1 = counterclockwise
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
-  origin = createVector(0, 0);
-  maxDir = createVector(width / 2, height / 2);
-  maxMag = maxDir.mag();
-
-  nodeCount = int(width / 80 * (height / 80));
-
-  var Mover = function() {
-    this.position = createVector(Math.random() * width, Math.random() * height);
-    this.velocity = createVector(0, 0);
-    this.acceleration = createVector(0, 0);
-    this.vector = createVector(0, 0);
-    this.hitArea = 100;
-    this.size = int(random(minNodeSize, maxNodeSize));
-  };
-
-  Mover.prototype.update = function(xPos, yPos) {
-    var newPosition = this.vector;
-
-    if (xPos && yPos) {
-      newPosition = createVector(xPos, yPos);
-    }
-
-    var dir = p5.Vector.sub(newPosition, this.position);
-    var closeness = (maxMag - dir.mag()) / maxMag;
-    dir.normalize();
-    dir.mult(closeness);
-
-    this.acceleration = dir;
-    this.velocity.add(this.acceleration);
-    this.velocity.limit(5);
-    this.position.add(this.velocity);
-  };
-
-  Mover.prototype.display = function() {
-    fill(255);
-    strokeWeight(1);
-    ellipse(this.position.x, this.position.y, this.size, this.size);
-  };
-
-  Mover.prototype.checkBoundary = function(connectionNode) {
-    var distance = dist(
-      this.position.x,
-      this.position.y,
-      connectionNode.position.x,
-      connectionNode.position.y
-    );
-    if (distance < this.hitArea) {
-      strokeWeight(0.25);
-      line(
-        this.position.x,
-        this.position.y,
-        connectionNode.position.x,
-        connectionNode.position.y
-      );
-    }
-  };
-
-  Mover.prototype.checkEdges = function() {
-    if (this.position.x > windowWidth) {
-      this.position.x = 0;
-    } else if (this.position.x < 0) {
-      this.position.x = windowWidth;
-    }
-
-    if (this.position.y > windowHeight) {
-      this.position.y = 0;
-    } else if (this.position.y < 0) {
-      this.position.y = windowHeight;
-    }
-  };
-
-  for (var i = 0; i < nodeCount; i++) {
-    movers.push(new Mover());
-  }
+  // background(250);
+  background(0);
+  ellipseMode(CENTER);
+  noStroke();
+  frameRate(60);
+  createCanvas(windowWidth, windowHeight);
+  translate_x = width / 2;
+  translate_y = height / 2;
 }
 
 function draw() {
-  background('#e6e6e6');
+  fill('rgba(255,255,255,0.04)');
+  rect(-10, -10, width + 10, height + 10);
+  fill(0);
+  angle = frameCount * 5 % 90;
 
-  for (var i = 0; i < nodeCount; i++) {
-    var randX = Math.random() * width - 40 + 20;
-    var randY = Math.random() * height - 40 + 20;
-    movers[i].update(randX, randY);
+  // angle reset
+  if (angle == 0) {
+    // up
+    //*********************
+    if (currentPath == 0) {
+      // set random rotation
+      if (translate_x >= width - gridBlock * 2) {
+        flipFlop = -1;
+      } else if (translate_x <= 0 + gridBlock * 2) {
+        flipFlop = 1;
+      } else {
+        flipFlop = currentRotation[int(random(2))];
+      }
 
-    movers[i].checkEdges();
-    movers[i].display();
+      // clockwise
+      if (flipFlop == 1) {
+        //bottomright cw
+        //*********************
+        x = -gridBlock / 2;
+        y = 0;
+        if (previousAnchor == 0) {
+          translate_x += gridBlock;
+          translate_y += 0;
+        } else if (previousAnchor == 1) {
+          translate_x += 0;
+          translate_y += 0;
+        }
+        previousAnchor = 2;
+        currentPath = 1;
+        // console.log('bottomright cw');
 
-    for (var j = i + 1; j < nodeCount; j++) {
-      movers[i].checkBoundary(movers[j]);
+        // counter clockwise
+      } else {
+        //bottomleft acw
+        //*********************
+        x = gridBlock / 2;
+        y = 0;
+        if (previousAnchor == 0) {
+          translate_x += 0;
+          translate_y += 0;
+        } else if (previousAnchor == 1) {
+          translate_x += -gridBlock;
+          translate_y += 0;
+        }
+        previousAnchor = 3;
+        currentPath = 3;
+        // console.log('bottomleft acw');
+      }
+
+      // right
+      //*********************
+    } else if (currentPath == 1) {
+      // set random rotation
+      if (translate_y >= height - gridBlock * 2) {
+        flipFlop = -1;
+      } else if (translate_y <= 0 + gridBlock * 2) {
+        flipFlop = 1;
+      } else {
+        flipFlop = currentRotation[int(random(2))];
+      }
+
+      if (flipFlop == 1) {
+        //bottomleft cw
+        //*********************
+        x = 0;
+        y = -gridBlock / 2;
+        if (previousAnchor == 1) {
+          translate_x += 0;
+          translate_y += gridBlock;
+        } else if (previousAnchor == 2) {
+          translate_x += 0;
+          translate_y += 0;
+        }
+        previousAnchor = 3;
+        currentPath = 2;
+        // console.log('bottomleft cw');
+      } else {
+        //topleft acw
+        //*********************
+        x = 0;
+        y = gridBlock / 2;
+        if (previousAnchor == 1) {
+          translate_x += 0;
+          translate_y += 0;
+        } else if (previousAnchor == 2) {
+          translate_x += 0;
+          translate_y += -gridBlock;
+        }
+        previousAnchor = 0;
+        currentPath = 0;
+        // console.log('topleft acw');
+      }
+
+      // down
+      //*********************
+    } else if (currentPath == 2) {
+      // set random rotation
+      if (translate_x >= width - gridBlock * 2) {
+        flipFlop = 1;
+      } else if (translate_x <= 0 + gridBlock * 2) {
+        flipFlop = -1;
+      } else {
+        flipFlop = currentRotation[int(random(2))];
+      }
+
+      if (flipFlop == 1) {
+        //topleft cw
+        //*********************
+        x = gridBlock / 2;
+        y = 0;
+        if (previousAnchor == 2) {
+          translate_x += -gridBlock;
+          translate_y += 0;
+        } else if (previousAnchor == 3) {
+          translate_x += 0;
+          translate_y += 0;
+        }
+        previousAnchor = 0;
+        currentPath = 3;
+        // console.log('topleft cw');
+      } else {
+        //topright acw
+        //*********************
+        x = -gridBlock / 2;
+        y = 0;
+        if (previousAnchor == 2) {
+          translate_x += 0;
+          translate_y += 0;
+        } else if (previousAnchor == 3) {
+          translate_x += gridBlock;
+          translate_y += 0;
+        }
+        previousAnchor = 1;
+        currentPath = 1;
+        // console.log('topright acw');
+      }
+
+      // left
+      //*********************
+    } else {
+      // set random rotation
+      if (translate_y >= height - gridBlock * 2) {
+        flipFlop = 1;
+      } else if (translate_y <= 0 + gridBlock * 2) {
+        flipFlop = -1;
+      } else {
+        flipFlop = currentRotation[int(random(2))];
+      }
+
+      if (flipFlop == 1) {
+        //topright cw
+        //*********************
+        x = 0;
+        y = gridBlock / 2;
+        if (previousAnchor == 0) {
+          translate_x += 0;
+          translate_y += 0;
+        } else if (previousAnchor == 3) {
+          translate_x += 0;
+          translate_y += -gridBlock;
+        }
+        previousAnchor = 1;
+        currentPath = 0;
+        // console.log('topright cw');
+      } else {
+        //bottomright acw
+        //*********************
+        x = 0;
+        y = -gridBlock / 2;
+        if (previousAnchor == 0) {
+          translate_x += 0;
+          translate_y += gridBlock;
+        } else if (previousAnchor == 3) {
+          translate_x += 0;
+          translate_y += 0;
+        }
+        previousAnchor = 2;
+        currentPath = 2;
+        // console.log('bottomright acw');
+      }
     }
-  }
+  } // end angle
 
-  fill(255, 0, 0);
-  //text(maxMag, 10, 10);
+  push();
+  translate(translate_x, translate_y);
+  fill('rgb(230, 230, 230)');
+  // fill('rgb(200,200,200)');
+  ellipse(0, 0, 35, 35);
+  rotate(radians((angle + angleOffset) * flipFlop));
+  fill('#000');
+  ellipse(x, y, 6, 6);
+  fill(250, 0, 0);
+  pop();
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+var test = 'finally';
