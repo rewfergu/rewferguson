@@ -104,11 +104,11 @@
     "name": "Notecode",
     "folder": "notecode",
     "status": 1,
-    "image": "",
+    "image": "https://s3.amazonaws.com/rewferguson.com/img/Notecode/notecode.png",
     "description": "A note taking app build on react, mongo and CodeMirror",
     "tags": ["codemirror", "react", "mongo", "jest"],
     "github": "https://github.com/rewfergu/notecode",
-    "link": ""
+    "link": "https://notecode-c3469.firebaseapp.com/"
   },
   {
     "name": "Octopus",
