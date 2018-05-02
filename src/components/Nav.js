@@ -11,7 +11,7 @@ export default () => (
     <nav {...nav}>
       <ul>
         <li>
-          <Link to="work">
+          <Link to="/work">
             <svg>
               <use xlinkHref={withPrefix('icons.svg#icon-images')} />
             </svg>
@@ -19,7 +19,7 @@ export default () => (
           </Link>
         </li>
         <li>
-          <Link to="projects">
+          <Link to="/projects">
             <svg>
               <use xlinkHref={withPrefix('icons.svg#icon-book')} />
             </svg>
