@@ -1,5 +1,9 @@
-.DS_Store
+# Project dependencies
+.cache
 node_modules
-.sass-cache
-img
-deploy.sh
+yarn-error.log
+
+# Build directory
+/public
+
+.DS_Store

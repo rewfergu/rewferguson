@@ -1,29 +1,30 @@
 {
-  "dependencies": {
-    "browser-sync": "^2.18.13",
-    "foundation-sites": "^6.4.4-rc1",
-    "front-matter": "^2.1.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-data": "^1.2.1",
-    "gulp-ext": "^1.0.0",
-    "gulp-nunjucks": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "marked": "^0.3.6",
-    "node-sass": "^4.7.2",
-    "run-sequence": "^2.1.0"
-  },
-  "name": "nunjucks-static-site-generator",
+  "name": "robert-ferguson-personal-site",
+  "description": "robert ferguson personal site",
   "version": "1.0.0",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "nunjucks": "^3.0.1",
-    "through2": "^2.0.3"
+  "author": "Robert Ferguson",
+  "dependencies": {
+    "gatsby": "^1.9.241",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-glamor": "^1.6.13",
+    "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-prismjs": "^2.0.2",
+    "gatsby-source-filesystem": "^1.5.29",
+    "gatsby-transformer-json": "^1.0.16",
+    "gatsby-transformer-remark": "^1.7.39",
+    "glamorous": "^4.12.1",
+    "react-helmet": "^5.2.0"
   },
+  "license": "MIT",
   "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT",
-  "description": ""
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  }
 }

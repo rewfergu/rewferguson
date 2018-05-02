@@ -1,0 +1,33 @@
+html {
+  font-family: "proxima-nova", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  color: #862d2d;
+}
+
+main img,
+main video {
+  max-width: 100%;
+}

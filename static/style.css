@@ -1,0 +1,93 @@
+body {
+  font-weight: 400;
+  height: 100%;
+  /* background: #e6e6e6; */
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+a,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "proxima-nova", sans-serif;
+}
+
+#defaultCanvas0 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.imageWindow {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  opacity: 0;
+}
+
+.imageWindow img {
+  border: 1px solid #555;
+  display: block;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s;
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 1;
+  -webkit-animation: fadeOut .5s;
+  animation: fadeOut .5s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
