@@ -36,7 +36,7 @@ function setup() {
 }
 
 function draw() {
-  fill('rgba(255,255,255,0.04)');
+  fill('rgba(232,232,232,0.04)');
   rect(-10, -10, width + 10, height + 10);
   fill(0);
   angle = frameCount * 5 % 90;
@@ -226,8 +226,8 @@ function draw() {
 
   push();
   translate(translate_x, translate_y);
-  fill('rgb(230, 230, 230)');
-  // fill('rgb(200,200,200)');
+  // fill('rgb(230, 230, 230)');
+  fill('rgb(200,200,200)');
   ellipse(0, 0, 35, 35);
   rotate(radians((angle + angleOffset) * flipFlop));
   fill('#000');
