@@ -26,10 +26,11 @@
     "build": "next build",
     "start": "next start",
     "serve": "NODE_ENV=production node server.js",
-    "export": "next export",
+    "export": "next export && touch out/.nojekyll && cp ./CNAME out/CNAME",
     "images": "node processImages.js",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eol": "find  out/ -type f -exec dos2unix {} +"
   },
   "devDependencies": {
     "prettier": "^1.11.1"

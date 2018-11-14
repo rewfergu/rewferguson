@@ -25,9 +25,13 @@ const Header = props => {
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </MenuButton>
-      <H1 className={props.activeMenu && 'activeMenu'}>
-        <TitleSVG fill="white" style={{ width: '100%' }} />
-      </H1>
+      <Link to="/">
+        <a>
+          <H1 className={props.activeMenu && 'activeMenu'}>
+            <TitleSVG fill="white" style={{ width: '100%' }} />
+          </H1>
+        </a>
+      </Link>
 
       <Nav className={props.activeMenu && 'activeMenu'}>
         <NavList>
@@ -133,7 +137,6 @@ const Header = props => {
               <a href="http://www.linkedin.com/in/rewferguson">LinkedIn</a>
             </NavHeading>
           </NavListItem>
-
         </NavList>
       </Nav>
     </StyledHeader>
