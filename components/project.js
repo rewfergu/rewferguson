@@ -40,15 +40,16 @@ const Project = props => {
   if (projectData) {
     return (
       <Section>
-        {projectData.cover &&
+        {projectData.cover && (
           <Img
-            src={`/static/images/${projectData.cover}`}
-            alt="project image"
+            src={`/static/images/${projectData.cover.src}`}
+            alt={projectData.cover.alt}
             style={{
               borderBottom: '3px solid rgba(0, 0, 0, 0.12941176470588237)',
               width: '100%'
             }}
-          />}
+          />
+        )}
         <ProjectContent>
           <h1>{projectData.name}</h1>
           <Description

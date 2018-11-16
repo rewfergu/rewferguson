@@ -30,10 +30,11 @@ const ProjectArray = props => {
                   props.selectProject(item.slug);
                 }}
               >
-                <Img src={`/static/images/${item.cover}`} alt="project image" />
-                <ProjectName>
-                  {item.name}
-                </ProjectName>
+                <Img
+                  src={`/static/images/${item.cover.src}`}
+                  alt={item.cover.alt}
+                />
+                <ProjectName>{item.name}</ProjectName>
               </a>
             </Link>
           </ProjectWrap>
@@ -82,7 +83,8 @@ const ProjectWrap = styled.li`
     display: block;
     text-decoration: none;
     &:hover {
-      color: #de3115;
+      /* color: #de3115; */
+      color: #e0006e;
     }
   }
 `;

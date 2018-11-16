@@ -20,8 +20,7 @@ const Nav = styled.nav`
   &.activeMenu {
     top: -120vh;
   }
-    
-      
+
   a {
     color: #1e325a;
     text-decoration: none;
@@ -29,7 +28,8 @@ const Nav = styled.nav`
     &:hover,
     &:focus,
     &.active {
-      color: #de3115;
+      /* color: #de3115; */
+      color: #e0006e;
     }
   }
 `;
@@ -40,9 +40,7 @@ const NavList = styled.ul`
   list-style: none;
 `;
 
-const NavListItem = styled.li`
-
-`;
+const NavListItem = styled.li``;
 
 const NavHeading = styled.div`
   font-size: 1.5rem;

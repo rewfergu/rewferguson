@@ -10,8 +10,12 @@ class Images extends React.Component {
   render() {
     return (
       <ImageList>
-        {this.props.gallery.map(url => (
-          <ImageWrapper key={`projectImageGallery_${url}`} url={url} />
+        {this.props.gallery.map(({ src, alt }) => (
+          <ImageWrapper
+            key={`projectImageGallery_${src}`}
+            src={src}
+            alt={alt}
+          />
         ))}
 
         {this.props.videos.map(url => (
@@ -52,7 +56,7 @@ class ImageWrapper extends React.Component {
         className={this.state.active && 'active'}
       >
         <ImageControl>
-          <Img src={`/static/images/${this.props.url}`} alt="image" />
+          <Img src={`/static/images/${this.props.src}`} alt={this.props.alt} />
         </ImageControl>
       </StyledWrapper>
     );
