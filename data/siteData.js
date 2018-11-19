@@ -104,10 +104,14 @@ const siteData = [
     github: 'https://github.com/rewfergu/dynamiCat'
   },
   {
-    name: 'Flip Draw',
+    name: 'FlipDraw',
     slug: 'flipdraw',
     status: 1,
-    cover: 'projects/flipDraw/header.png',
+    featured: true,
+    cover: {
+      src: 'projects/flipDraw/cover.png',
+      alt: 'both draw and guess screens with mule as the selected animal'
+    },
     description:
       'Simple two player drawing and guessing game using JavaScript.  One player has a blank drawing canvas and the other player has scrambled letter tiles.  As the first player draws the second player guesses the drawing by assembling the tiles.',
     tags: [
@@ -121,7 +125,18 @@ const siteData = [
       'mobile'
     ],
     github: 'https://github.com/rewfergu/flipDraw',
-    link: ''
+    link: '',
+    images: [
+      {
+        src: 'projects/flipDraw/heron-draw.png',
+        alt: 'the flipdraw draw screen with heron as the chosen animal'
+      },
+      {
+        src: 'projects/flipDraw/heron-guess.png',
+        alt: 'the flipdraw guess screen with the heron drawing visible'
+      }
+    ],
+    video: ['https://www.youtube.com/watch?v=FgEt6hTyxCs']
   },
   {
     name: 'Frame Squeezer',
