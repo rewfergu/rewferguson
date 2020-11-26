@@ -152,7 +152,6 @@ const StyledHeader = styled.header`
   top: 0;
   background: transparent;
   box-sizing: border-box;
-  position: fixed;
   z-index: 200;
 
   @media (min-width: 800px) {
@@ -196,10 +195,6 @@ const H1 = styled.h1`
   box-sizing: border-box;
   will-change: height;
   transition: height 0.3s linear;
-
-  &.activeMenu {
-    height: 100px;
-  }
 
   svg {
     max-width: 150px;

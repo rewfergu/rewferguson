@@ -1,37 +1,37 @@
-import App, { Container } from 'next/app';
-import React from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
-import { Link, Router } from '../routes';
+import App, { Container } from 'next/app'
+import React from 'react'
+import { CSSTransitionGroup } from 'react-transition-group'
+import { Link, Router } from '../routes'
 // import { withRouter } from 'next/router';
-import { PageTransition } from 'next-page-transitions';
+import { PageTransition } from 'next-page-transitions'
 
-import siteData from '../data/siteData';
+import siteData from '../data/siteData'
 
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import Header from '../components/header/header';
-import Project from '../components/project';
+import Header from '../components/header/header'
+import Project from '../components/project'
 
-import '../style/app.css';
-import GitHubLink from '../components/githubLink';
-const TIMEOUT = 400;
+import '../style/app.css'
+import GitHubLink from '../components/githubLink'
+const TIMEOUT = 400
 
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
+    let pageProps = {}
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
 
-    return { pageProps };
+    return { pageProps }
   }
 
   state = {
     activeProject: null,
     projectList: [],
-    activeMenu: true
-  };
+    activeMenu: true,
+  }
 
   componentWillReceiveProps() {
     // console.log('will receive props', this.props.router.asPath);
@@ -51,67 +51,67 @@ class MyApp extends App {
   }
 
   componentWillMount() {
-    console.log('component will mount');
-    const pathName = this.props.router.asPath;
-    const pathArray = pathName.split('/');
+    console.log('component will mount')
+    const pathName = this.props.router.asPath
+    const pathArray = pathName.split('/')
 
     if (pathArray[pathArray.length - 1] === '') {
-      pathArray.pop();
+      pathArray.pop()
     }
 
-    console.log('path array', pathArray);
+    console.log('path array', pathArray)
     if (pathArray.length === 3 && pathArray[1] === 'work') {
-      console.log('the current project is', pathArray[2]);
-      this.selectProject(pathArray[2]);
+      console.log('the current project is', pathArray[2])
+      this.selectProject(pathArray[2])
       // Router.pushRoute('pathName');
     }
 
     if (pathArray.length === 2 && pathArray[1] === 'work') {
-      console.log('the current project is', pathArray[1]);
-      this.selectProject(pathArray[1]);
+      console.log('the current project is', pathArray[1])
+      this.selectProject(pathArray[1])
     }
 
     if (pathArray.length === 2 && pathArray[1] === 'about') {
-      console.log('the current project is', pathArray[1]);
-      this.selectProject(pathArray[1]);
+      console.log('the current project is', pathArray[1])
+      this.selectProject(pathArray[1])
     }
   }
 
   selectProject = project => {
-    console.log('project has been selected', project);
+    console.log('project has been selected', project)
 
     this.setState({
       activeProject: project,
-      activeMenu: true
-    });
-  };
+      activeMenu: true,
+    })
+  }
 
   toggleMenu = () => {
     this.setState(prevState => {
       return {
-        activeMenu: !this.state.activeMenu
-      };
-    });
-  };
+        activeMenu: !this.state.activeMenu,
+      }
+    })
+  }
 
   filterProjectData = project => {
     if (!project) {
-      return null;
+      return null
     }
 
-    const data = siteData.filter(item => item.slug === project);
+    const data = siteData.filter(item => item.slug === project)
 
     if (data[0]) {
-      return data[0];
+      return data[0]
     }
 
-    return null;
-  };
+    return null
+  }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
-    const projectArray = [];
+    const projectArray = []
     projectArray.push(
       <Component
         {...pageProps}
@@ -120,7 +120,7 @@ class MyApp extends App {
         key={this.props.router.asPath}
         siteData={siteData}
       />
-    );
+    )
 
     return (
       <Wrapper>
@@ -151,7 +151,7 @@ class MyApp extends App {
             loadingDelay={1000}
             loadingTimeout={{
               enter: 300,
-              exit: 0
+              exit: 0,
             }}
             loadingClassNames="loading-indicator"
           >
@@ -166,23 +166,22 @@ class MyApp extends App {
           {/*<Component {...pageProps} />*/}
         </Main>
       </Wrapper>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default MyApp
 
 const Wrapper = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 800px) {
     display: flex;
   }
-`;
+`
 
 const Main = styled.main`
-  /* width: 100%; */
-  padding-top: 100px;
   position: relative;
   z-index: 100;
   margin: 1rem;
@@ -193,7 +192,7 @@ const Main = styled.main`
     justify-content: center;
     align-items: flex-start;
     padding-top: 2rem;
-    width:100%;
+    width: 100%;
   }
 
   .contentWrap {
@@ -207,7 +206,7 @@ const Main = styled.main`
     @media (min-width: 800px) {
     }
   }
-`;
+`
 
 // <Project key={projectData.slug} projectData={projectData} />
 // const projectArray = this.state.projectList.map(projectData => (
