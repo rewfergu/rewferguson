@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import GithubSvg from '../images/github.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { ReactComponent as GithubSvg } from '../images/github.svg'
 
 const GitHubLink = props => (
   <A href={props.url}>
     <GithubSvg />
     {props.url}
   </A>
-);
+)
 
-export default GitHubLink;
+export default GitHubLink
 
 const A = styled.a`
   display: flex;
@@ -22,4 +22,4 @@ const A = styled.a`
     display: block;
     margin-right: 0.5rem;
   }
-`;
+`

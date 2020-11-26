@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import LinkSvg from '../images/link.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { ReactComponent as LinkSvg } from '../images/link.svg'
 
 const ProjectLink = props => (
   <A href={props.url}>
     <LinkSvg />
     {props.url}
   </A>
-);
+)
 
-export default ProjectLink;
+export default ProjectLink
 
 const A = styled.a`
   display: flex;
@@ -22,4 +22,4 @@ const A = styled.a`
     display: block;
     margin-right: 0.5rem;
   }
-`;
+`

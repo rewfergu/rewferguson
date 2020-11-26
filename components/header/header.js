@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 // import Link from 'next/link';
 
-import { Nav, NavList, NavListItem, NavHeading } from './nav';
-import { CategoryList, Category } from './category';
-import { Submenu, SubmenuItem } from './submenu';
-import { Link } from '../../routes';
+import { Nav, NavList, NavListItem, NavHeading } from './nav'
+import { CategoryList, Category } from './category'
+import { Submenu, SubmenuItem } from './submenu'
+import { Link } from '../../routes'
 
-import styled from 'styled-components';
-import TitleSVG from '../../images/title.svg';
+import styled from 'styled-components'
+import { ReactComponent as TitleSVG } from '../../images/title.svg'
 
 const Header = props => {
-  const data = props.siteData;
+  const data = props.siteData
   return (
     <StyledHeader>
       <MenuButton onClick={props.toggleMenu}>
@@ -41,8 +41,8 @@ const Header = props => {
                 <a
                   className={props.activeProject === 'about' ? 'active' : null}
                   onClick={() => {
-                    console.log('about click');
-                    props.selectProject('about');
+                    console.log('about click')
+                    props.selectProject('about')
                   }}
                 >
                   About
@@ -57,7 +57,7 @@ const Header = props => {
                 <a
                   className={props.activeProject === 'work' ? 'active' : null}
                   onClick={() => {
-                    props.selectProject('work');
+                    props.selectProject('work')
                   }}
                 >
                   Work
@@ -140,10 +140,10 @@ const Header = props => {
         </NavList>
       </Nav>
     </StyledHeader>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 
 const StyledHeader = styled.header`
   height: auto;
@@ -161,7 +161,7 @@ const StyledHeader = styled.header`
     position: relative;
     background: rgba(255, 255, 255, 0.75);
   }
-`;
+`
 
 const MenuButton = styled.button`
   background: transparent;
@@ -179,7 +179,7 @@ const MenuButton = styled.button`
   @media (min-width: 800px) {
     display: none;
   }
-`;
+`
 
 const H1 = styled.h1`
   background: #1e325a;
@@ -231,4 +231,4 @@ const H1 = styled.h1`
       }
     }
   }
-`;
+`
