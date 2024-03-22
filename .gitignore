@@ -1,4 +1,4 @@
 .next
 .DS_Store
 node_modules
-static/images/projects
+public/images/projects
