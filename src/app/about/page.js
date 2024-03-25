@@ -1,18 +1,31 @@
-import React from "react";
-import Image from "next/image";
-import styles from "./page.module.css";
-import { techStyles } from "./page.css";
+import React from 'react'
+import Image from 'next/image'
+import styles from './page.module.css'
+import { techStyles } from './page.css'
 
-import JSSVG from "./javascript.svg";
-import NodeSVG from "./node-dot-js.svg";
-import ReactSVG from "./react.svg";
-import PythonSVG from "./python.svg";
-import PHPSVG from "./php.svg";
-import MYSQLSVG from "./mysql.svg";
-import MongoSVG from "./mongodb.svg";
-import GraphQLSVG from "./graphql.svg";
-import DockerSVG from "./docker.svg";
-import WordPressSVG from "./wordpress.svg";
+import TSSVG from './icons/typescript.svg'
+import NodeSVG from './icons/node.svg'
+import ReactSVG from './icons/react.svg'
+import PythonSVG from './icons/python.svg'
+import NextSVG from './icons/next.svg'
+import MYSQLSVG from './icons/mysql.svg'
+import MongoSVG from './icons/mongodb.svg'
+import GraphQLSVG from './icons/graphql.svg'
+import DockerSVG from './icons/docker.svg'
+import { PostgresSVG } from './icons/postgres.svg'
+
+const icons = [
+  { name: 'TypeScript', Svg: TSSVG },
+  { name: 'React', Svg: ReactSVG },
+  { name: 'Node', Svg: NodeSVG },
+  { name: 'Python', Svg: PythonSVG },
+  { name: 'PostgreSQL', Svg: PostgresSVG },
+  { name: 'Next', Svg: NextSVG },
+  { name: 'MySQL', Svg: MYSQLSVG },
+  { name: 'MongoDB', Svg: MongoSVG },
+  { name: 'GraphQL', Svg: GraphQLSVG },
+  { name: 'Docker', Svg: DockerSVG },
+]
 
 export default function () {
   return (
@@ -50,93 +63,24 @@ export default function () {
         <h2
           className={styles.heading2}
           style={{
-            borderBottom: "1px dashed #ccc",
-            paddingBottom: "1rem",
-            marginTop: "3rem",
+            borderBottom: '1px dashed #ccc',
+            paddingBottom: '1rem',
+            marginTop: '3rem',
           }}
         >
           Skills
         </h2>
         <ul className={techStyles}>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <JSSVG className={styles.svg} />
-
-              <figcaption className={styles.figcaption}>JavaScript</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <NodeSVG className={styles.svg} />
-              <figcaption className={styles.figcaption}>Node</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <ReactSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>React</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <PHPSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>PHP</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <PythonSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>Python</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <MYSQLSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>MySQL</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <MongoSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>MongoDB</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <GraphQLSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>GraphQL</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <DockerSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>Docker</figcaption>
-            </figure>
-          </li>
-          <li className={styles.li}>
-            <figure className={styles.figure}>
-              <div>
-                <WordPressSVG className={styles.svg} />
-              </div>
-              <figcaption className={styles.figcaption}>WordPress</figcaption>
-            </figure>
-          </li>
+          {icons.map(({ name, Svg }) => (
+            <li className={styles.li} key={name}>
+              <figure className={styles.figure}>
+                <Svg className={styles.svg} />
+                <figcaption className={styles.figcaption}>{name}</figcaption>
+              </figure>
+            </li>
+          ))}
         </ul>
       </section>
     </section>
-  );
+  )
 }

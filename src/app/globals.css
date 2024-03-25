@@ -24,11 +24,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  font-family: "proxima-nova", "proxima nova", sans-serif;
+  /* font-family: 'proxima-nova', 'proxima nova', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-    color: #323232;
-    background: #efefef;
+  color: #323232;
+  background: #efefef;
 }
 
 p {

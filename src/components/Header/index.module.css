@@ -36,7 +36,7 @@
   margin: 0;
   padding: 1.5rem 1rem 1.2rem 0.75rem;
   font-size: 2rem;
-  font-family: proxima-nova, sans-serif;
+  /* font-family: proxima-nova, sans-serif; */
   text-align: center;
   position: relative;
   z-index: 400;
@@ -89,7 +89,7 @@
 }
 
 .nav {
-  font-family: proxima-nova, sans-serif;
+  /* font-family: proxima-nova, sans-serif; */
   padding: 1rem;
   position: absolute;
   width: 100%;

@@ -1,9 +1,7 @@
 import './globals.css'
 import Script from 'next/script'
-// import { Inter } from "next/font/google";
 import { Header } from '../components/Header'
 import styles from './layout.module.css'
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: 'Robert Ferguson: Web Engineer',
@@ -28,6 +26,13 @@ export default function RootLayout({
       </body>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js" />
       <Script src="/p5-sketch.js" strategy="beforeInteractive" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
     </html>
   )
 }
