@@ -32,7 +32,7 @@ export default function () {
     <section className={styles.container}>
       <header className={styles.header}>
         <Image
-          src="/Rob.jpg"
+          src="/images/Rob.jpg"
           alt="my portrait"
           width={150}
           height={150}
