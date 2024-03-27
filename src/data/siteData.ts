@@ -26,12 +26,13 @@ export const siteData: siteDataType[] = [
     slug: 'sail-ui',
     status: 2,
     featured: true,
-    // cover: {
-    //   // src: 'projects/Sail-UI/cover.jpg',
-    //   // alt: '',
-    // },
-    description: 'Sail UI was the componet library that I built for SetSail.',
-    tags: ['react', 'fluent', 'griffel', 'storybook', 'nivo'],
+    cover: {
+      src: 'projects/Sail-UI/sailui-cover.png',
+      alt: 'The Sail UI component library chromatic menu',
+    },
+    description:
+      'The first thing that I was asked to do when joining SetSail was create a unified set of UI compopnents for the team to use. Sail UI enabled the team to quickly build out new features and maintain a consistent look and feel across the application. The library was built in React and styled with Fluent UI. We used Storybook to document the components and Chromatic to test them. We also used Nivo to create the charts and graphs.',
+    tags: ['react', 'fluent', 'griffel', 'storybook', 'chromatic', 'nivo'],
     images: [
       {
         src: 'projects/Sail-UI/sailui-activity-widget.png',
@@ -39,10 +40,6 @@ export const siteData: siteDataType[] = [
       },
       {
         src: 'projects/Sail-UI/sailui-activity-widget2.png',
-        alt: 'the Sail UI component library',
-      },
-      {
-        src: 'projects/Sail-UI/sailui-chromatic.png',
         alt: 'the Sail UI component library',
       },
       {
@@ -65,23 +62,10 @@ export const siteData: siteDataType[] = [
         src: 'projects/Sail-UI/sailui-widget-chat2.png',
         alt: 'the Sail UI component library',
       },
-
-      // {
-      //   src: 'projects/ACC-Catalog/catalog.austincc.edu.png',
-      //   alt: 'the full home page screenshot with menu, hero image, message from the president and how to use this catalog intro',
-      // },
-      // {
-      //   src: 'projects/ACC-Catalog/catalog.austincc.edu2.png',
-      //   alt: 'secondary card navigation and how to use this catalog intro',
-      // },
-      // {
-      //   src: 'projects/ACC-Catalog/catalog.austincc.edu_search__q=international+students.png',
-      //   alt: 'search results screenshot',
-      // },
-      // {
-      //   src: 'projects/ACC-Catalog/catalog.austincc.edu_college-entry_paying-for-college_buy-textbooks-supplies_.png',
-      //   alt: 'screenshot for textbook and supplies page',
-      // },
+      {
+        src: 'projects/Sail-UI/sailui-chromatic.png',
+        alt: 'the Sail UI component library',
+      },
     ],
   },
   {
