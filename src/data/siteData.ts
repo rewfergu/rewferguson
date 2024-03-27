@@ -22,6 +22,53 @@ export type siteDataType = {
 
 export const siteData: siteDataType[] = [
   {
+    name: 'SetSail',
+    slug: 'setsail',
+    status: 2,
+    featured: true,
+    cover: {
+      src: 'projects/SetSail/setSail_cover.png',
+      alt: 'the SetSail dashboard with a variety of sales data charts and graphs',
+    },
+    description:
+      'SetSail is a sales data analytics application that gives sales teams the tools they need to track their progress and hit their targets. The application is built in React and Node with a Postgres database. We use ChatGPT to provide sales teams with real-time insights and suggestions. The application is hosted on AWS and uses a variety of AWS services to provide a secure and scalable platform.',
+    tags: ['react', 'postgres', 'node', 'koa', 'chatgpt', 'aws'],
+    images: [
+      {
+        src: 'projects/SetSail/setSail_chat.png',
+        alt: 'the SetSail chat interface',
+      },
+      {
+        src: 'projects/SetSail/setSail_chat2.png',
+        alt: 'the SetSail chat interface',
+      },
+      {
+        src: 'projects/SetSail/setSail_chat3.png',
+        alt: 'the SetSail chat interface',
+      },
+      {
+        src: 'projects/SetSail/setSail_notification.png',
+        alt: 'the SetSail ssai notification configuration modal',
+      },
+      {
+        src: 'projects/SetSail/setSail_accounts.png',
+        alt: 'the SetSail accounts dashboard',
+      },
+      {
+        src: 'projects/SetSail/setSail_targets.png',
+        alt: 'the SetSail targets dashboard',
+      },
+      {
+        src: 'projects/SetSail/setSail_deals.png',
+        alt: 'the SetSail deals dashboard',
+      },
+      {
+        src: 'projects/SetSail/setSail_signals.png',
+        alt: 'the SetSail signals dashboard',
+      },
+    ],
+  },
+  {
     name: 'Sail UI',
     slug: 'sail-ui',
     status: 2,
