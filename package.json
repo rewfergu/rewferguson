@@ -5,8 +5,9 @@
   "author": "Robert Ferguson",
   "license": "MIT",
   "scripts": {
-    "build": "next build",
+    "build": "next build && npm run copy",
     "export": "touch out/.nojekyll && cp ./CNAME out/CNAME",
+    "copy": "cp -r build/* out",
     "dev": "next dev",
     "serve": "python3 -m http.server 8000 --directory out",
     "start": "next start",
