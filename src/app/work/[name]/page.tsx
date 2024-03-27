@@ -49,7 +49,7 @@ export default function Work({ params }: { params: { name: string } }) {
             url={projectData.github}
             Image={
               <Image
-                src="/github.svg"
+                src="/images/icons/github.svg"
                 alt="github logo"
                 width="24"
                 height="24"
@@ -61,7 +61,12 @@ export default function Work({ params }: { params: { name: string } }) {
           <ProjectLink
             url={projectData.link}
             Image={
-              <Image src="/link.svg" alt="link logo" width="24" height="24" />
+              <Image
+                src="/images/icons/link.svg"
+                alt="link logo"
+                width="24"
+                height="24"
+              />
             }
           />
         )}

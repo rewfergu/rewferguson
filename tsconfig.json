@@ -24,5 +24,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "processImages.js"],
-  "exclude": ["node_modules", "**/*.module.css"]
+  "exclude": ["node_modules"]
 }
