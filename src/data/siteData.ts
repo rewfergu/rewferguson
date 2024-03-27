@@ -22,6 +22,69 @@ export type siteDataType = {
 
 export const siteData: siteDataType[] = [
   {
+    name: 'Sail UI',
+    slug: 'sail-ui',
+    status: 2,
+    featured: true,
+    // cover: {
+    //   // src: 'projects/Sail-UI/cover.jpg',
+    //   // alt: '',
+    // },
+    description: 'Sail UI was the componet library that I built for SetSail.',
+    tags: ['react', 'fluent', 'griffel', 'storybook', 'nivo'],
+    images: [
+      {
+        src: 'projects/Sail-UI/sailui-activity-widget.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-activity-widget2.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-chromatic.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-progress-stat.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-progress-stat2.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-wavebar.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-widget-chat.png',
+        alt: 'the Sail UI component library',
+      },
+      {
+        src: 'projects/Sail-UI/sailui-widget-chat2.png',
+        alt: 'the Sail UI component library',
+      },
+
+      // {
+      //   src: 'projects/ACC-Catalog/catalog.austincc.edu.png',
+      //   alt: 'the full home page screenshot with menu, hero image, message from the president and how to use this catalog intro',
+      // },
+      // {
+      //   src: 'projects/ACC-Catalog/catalog.austincc.edu2.png',
+      //   alt: 'secondary card navigation and how to use this catalog intro',
+      // },
+      // {
+      //   src: 'projects/ACC-Catalog/catalog.austincc.edu_search__q=international+students.png',
+      //   alt: 'search results screenshot',
+      // },
+      // {
+      //   src: 'projects/ACC-Catalog/catalog.austincc.edu_college-entry_paying-for-college_buy-textbooks-supplies_.png',
+      //   alt: 'screenshot for textbook and supplies page',
+      // },
+    ],
+  },
+  {
     name: 'ACC Catalog',
     slug: 'acc-catalog',
     status: 2,
