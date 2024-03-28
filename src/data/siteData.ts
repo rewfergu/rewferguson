@@ -27,7 +27,7 @@ export const siteData: siteDataType[] = [
     status: 2,
     featured: true,
     cover: {
-      src: 'projects/SetSail/setSail_cover.png',
+      src: 'projects/SetSail/setsail_cover.png',
       alt: 'the SetSail dashboard with a variety of sales data charts and graphs',
     },
     description:
