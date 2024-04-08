@@ -55,7 +55,7 @@ export const siteData: siteDataType[] = [
         alt: 'the SetSail accounts dashboard',
       },
       {
-        src: 'projects/SetSail/setSail_targets.png',
+        src: 'projects/SetSail/setsail_targets.png',
         alt: 'the SetSail targets dashboard',
       },
       {
