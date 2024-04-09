@@ -47,6 +47,39 @@ export interface Post {
   readingTime?: number;
 }
 
+export interface WorkImage {
+  src: string;
+  alt: string;
+}
+export interface WorkProject {
+  /** A unique name that identifies a work project. */
+  name: string;
+
+  /** A work’s unique slug – part of the work’s URL based on its name, i.e. a work called “My Sample Page” has a slug “my-sample-page”. */
+  slug: string;
+
+  /**  */
+  status: number;
+
+  /**  */
+  priority: number;
+
+  /** Featured controls if a value shows up in the work dropdown  */
+  featured: boolean;
+
+  /** an optional object representing the cover image attributes url and string  */
+  cover?: WorkImage;
+
+  /** a list of technologies used  */
+  tags?: Array<string>;
+
+  /** an optional link to the project  */
+  link?: string;
+
+  /** an optional list of additional image objects  */
+  images?: Array<WorkImage>;
+}
+
 export interface MetaData {
   title?: string;
   ignoreTitleTemplate?: boolean;

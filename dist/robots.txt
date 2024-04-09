@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://rewferguson.com/sitemap-index.xml

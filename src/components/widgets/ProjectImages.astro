@@ -1,0 +1,10 @@
+---
+import Image from '~/components/common/Image.astro';
+const { images } = Astro.props;
+import type { WorkImage } from '~/types';
+---
+
+<div>
+  {!images && <p>No images found</p>}
+  {images.length > 0 && images.map((img: WorkImage) => <Image src={img.src} alt={img.alt} />)}
+</div>

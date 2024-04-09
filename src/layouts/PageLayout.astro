@@ -3,13 +3,15 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 
-import { headerData, footerData } from '~/navigation';
+import { getHeaderData, footerData } from '~/navigation';
 
 import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
 }
+
+const headerData = await getHeaderData();
 
 const { metadata } = Astro.props;
 ---
@@ -35,13 +37,12 @@ const { metadata } = Astro.props;
 
 <style is:global>
   html.dark body {
-    background: linear-gradient(0deg, hsl(181 70% 31% / 1) 0%, rgb(30 50 90) 100%);
+    background: linear-gradient(0deg, hsl(181 70% 31% / 1) 0%, hsl(198 74% 20% / 1));
   }
-
   #p5Canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -100;
   }
 </style>

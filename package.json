@@ -10,6 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "export": "touch out/.nojekyll && cp ./CNAME out/CNAME",
+    "copy": "cp -r build/* out",
     "serve": "python3 -m http.server 8000 --directory out",
     "images": "node processImages.js"
   },

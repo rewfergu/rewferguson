@@ -1,0 +1,105 @@
+---
+import Steps from '~/components/widgets/Steps.astro';
+import Step from '~/components/ui/Step.astro';
+---
+
+<Steps id="resume" title="Work History" classes={{ container: 'max-w-3xl' }}>
+  <Step title="Staff Frontend Engineer" company="SetSail" dates="05.2022 - 03.2024" icon="tabler:briefcase">
+    <ul class="text-primary">
+      <li>
+        <a href="https://setsail.co" target="_blank" rel="noopener"> SetSail</a>
+      </li>
+    </ul>
+    <p>
+      As a staff engineer I developed and supported front end features for our react application and browser extension.
+      I also built and managed the new Sail UI react component library to provide an accessible and consistent user
+      experience across all segments of the application.
+    </p>
+  </Step>
+
+  <Step title="Staff Software Enginner" company="Realtor.com" dates="07.2021 - 05.2022" icon="tabler:briefcase">
+    <ul class="text-primary">
+      <li>
+        <a href="https://realtor.com" target="_blank" rel="noopener"> Realtor Pro Dashboard </a>
+      </li>
+    </ul>
+    <p>
+      I designed, built and deployed React components and micro frontends for the Realtor Pro Dashboard product. I also
+      developed and deployed GraphQL endpoints to interface with our shared services and assets. I also helped build and
+      manage the new Harmony UI design system for the BACX teams (Broker, Agent, Concierge experiences) written in React
+      and Storybook.
+    </p>
+  </Step>
+
+  <Step title="Senior Software Engineer" company="Arm / Pelion" dates="04.2020 - 07.2021" icon="tabler:briefcase">
+    <ul class="text-primary">
+      <li>
+        <a href="https://pelion.com" target="_blank" rel="noopener"> Pelion IoT Platform </a>
+      </li>
+    </ul>
+    <p>
+      I joined Arm to improve the front end code and provide consistency in UX for the Pelion suite of applications. I
+      worked on the Pelion ML machine learning application (python / react), the Pelion Space Analytics application
+      (node / react) and was the primary contributor to the Pelion Design System (typescript). I worked with team
+      members to implement new features using the design system components and helped them improve some of the older
+      features built using bootstrap and other UI libraries.
+    </p>
+
+    <p>
+      After the org shift at Arm, I worked on several teams in the newly created Pelion startup, focusing on Python,
+      Node, and React. I managed the developer site in Django, which published guides, code and swagger api
+      documentation for developing with the Connectivity and Device Management products. I also worked on front end
+      features for the IoT Device Management application in React, and prototyped apis and user interfaces for the new
+      Connected Device Platform, which will be the gateway to the existing Pelion products.
+    </p>
+  </Step>
+
+  <Step title="Full Stack Software Engineer" company="Instructure" dates="04.2019 ~ 01.2020" icon="tabler:briefcase">
+    <ul class="text-primary">
+      <li>
+        <a href="https://www.getbridge.com/" target="_blank" rel="noopener">
+          Bridge LMS and Employee Development Platform
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instructure.com/k12/products/mastery/mastery-connect" target="_blank" rel="noopener">
+          MasteryConnect
+        </a>
+      </li>
+    </ul>
+    <p>
+      I worked on two different teams while at Instructure. On the Bridge career team I built and tested application
+      features in kotlin, spring, Postgres and React. On the MasteryConnect team I refactored front end code for student
+      facing features in React, RxJS and Ruby on Rails
+    </p>
+  </Step>
+
+  <Step
+    title="Instructional Web Manager"
+    company="Austin Community College"
+    dates="09.2017 ~ 04.2019"
+    icon="tabler:briefcase"
+  >
+    <p>
+      I worked at ACC for almost 10 years. I started because I wanted to teach web design, and took an additional part
+      time position for the flexibility and health insurance. I found that I liked the education environment so much I
+      took the first full time position available in Instructional Development as a Multimedia Developer. The position
+      was mostly web development using Flash, PHP, HTML, JavaScript and CSS.
+    </p>
+
+    <p>
+      A few years later I took on more responsibility as a Web Administrator and the last couple of years I was running
+      my own department called Instructional Web. I helped create the Instructional Web Services department to provide
+      leadership and development for online instructional content. It was a small team of four developers, two designers
+      and two content strategists. I managed design and full stack development (aws, php, mysql, python, js) for
+      instructional divisions.
+    </p>
+  </Step>
+
+  <Fragment slot="bg">
+    <div
+      class="absolute inset-0 bg-[hsl(188,52%,57%)] opacity-50 dark:bg-[rgb(88,202,170)] dark:bg-black dark:mix-blend-overlay"
+    >
+    </div>
+  </Fragment>
+</Steps>

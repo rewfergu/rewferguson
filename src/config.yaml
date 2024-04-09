@@ -86,10 +86,10 @@ ui:
       fonts: {}
       colors:
         default: rgb(229 236 246)
-        dark: rgb(3 6 32)
+        dark: hsl(198 74% 20% / 1)
         heading: rgb(247, 248, 248)
         muted: rgb(229 236 246 / 66%)
-        bgPage: rgb(3 6 32)
+        bgPage: hsl(198 74% 20% / 1)
         # primary: rgb(88 139 202)
         primary: rgb(88 187 202)
         # secondary: rgb(88 202 145)

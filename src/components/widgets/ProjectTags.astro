@@ -1,0 +1,23 @@
+---
+const { tags } = Astro.props;
+const h = 188;
+const s = '52%';
+const l = '57%';
+const tagList = tags.map((tag: string, index: number) => ({
+  name: tag,
+  color: `hsl(${h - 4 * index}, ${s}, ${l})`,
+}));
+---
+
+<ul class="not-prose p-0 my-8">
+  {
+    tagList.map((tag: { color: string; name: string }) => (
+      <li
+        class="inline-block py-2 px-4 p-2 text-sm rounded mb-1 mr-1 text-dark"
+        style={`background-color: ${tag.color};`}
+      >
+        {tag.name}
+      </li>
+    ))
+  }
+</ul>
