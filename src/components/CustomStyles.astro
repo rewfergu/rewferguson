@@ -1,0 +1,72 @@
+---
+import { UI } from 'robertferguson:config';
+
+import '@fontsource-variable/montserrat';
+
+// 'DM Sans'
+// Nunito
+// Dosis
+// Outfit
+// Roboto
+// Literata
+// 'IBM Plex Sans'
+// Karla
+// Poppins
+// 'Fira Sans'
+// 'Libre Franklin'
+// Inconsolata
+// Raleway
+// Oswald
+// 'Space Grotesk'
+// Urbanist
+
+const { tokens } = UI;
+
+const html = `
+  <style>
+    :root {
+      --rf-font-sans: ${tokens.default.fonts.sans ? `'${tokens.default.fonts.sans}'` : '""'};
+      --rf-font-serif: ${tokens.default.fonts.serif ? `'${tokens.default.fonts.serif}'` : 'var(--rf-font-sans)'};
+      --rf-font-heading: ${tokens.default.fonts.heading ? `'${tokens.default.fonts.heading}'` : 'var(--rf-font-sans)'};
+
+      --rf-color-primary: ${tokens.default.colors.primary};
+      --rf-color-secondary: ${tokens.default.colors.secondary};
+      --rf-color-accent: ${tokens.default.colors.accent};
+
+      --rf-color-text-heading: ${tokens.default.colors.heading};
+      --rf-color-text-default: ${tokens.default.colors.default};
+      --rf-color-text-dark: ${tokens.default.colors.dark};
+      --rf-color-text-muted: ${tokens.default.colors.muted};
+      --rf-color-bg-page: ${tokens.default.colors.bgPage};
+
+      --rf-color-bg-page-dark: ${tokens.dark.colors.bgPage};
+
+      ::selection {
+        background-color: lavender;
+      }
+    }
+
+    .dark {
+      ${tokens.dark.fonts.sans ? `--rf-font-sans: '${tokens.dark.fonts.sans}';` : ''}
+      ${tokens.dark.fonts.serif ? `--rf-font-serif: '${tokens.dark.fonts.serif};'` : ''}
+      ${tokens.dark.fonts.heading ? `--rf-font-heading: '${tokens.dark.fonts.heading}';` : ''}
+
+      --rf-color-primary: ${tokens.dark.colors.primary};
+      --rf-color-secondary: ${tokens.dark.colors.secondary};
+      --rf-color-accent: ${tokens.dark.colors.accent};
+
+      --rf-color-text-heading: ${tokens.dark.colors.heading};
+      --rf-color-text-default: ${tokens.dark.colors.default};
+      --rf-color-text-muted: ${tokens.dark.colors.muted};
+      --rf-color-bg-page: ${tokens.dark.colors.bgPage};
+
+      ::selection {
+        background-color: black;
+        color: snow;
+      }
+    }
+  </style>
+`;
+---
+
+<Fragment set:html={html} />

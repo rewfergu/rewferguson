@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+import { twMerge } from 'tailwind-merge';
+
+const { title, company, dates, icon, logo } = Astro.props;
+---
+
+<div class="flex group">
+  <div class="flex flex-col items-center mr-4 rtl:mr-0 rtl:ml-4">
+    <div>
+      <div class="flex items-center justify-center">
+        {
+          logo ? (
+            <div class="w-10 h-10">
+              <Fragment set:html={logo} />
+            </div>
+          ) : (
+            <Icon name={icon} class="w-10 h-10 p-2 rounded-full border-2 border-primary" />
+          )
+        }
+      </div>
+    </div>
+    <div class="w-px h-full bg-black/10 dark:bg-primary group-last:opacity-0"></div>
+  </div>
+  <div>
+    <div class="text-xl font-bold" set:html={title} />
+    <div class="text-xl font-normal" set:html={company} />
+    <div set:html={dates} />
+    <div class="mt-4 mb-12 text-md">
+      <slot />
+    </div>
+  </div>
+</div>

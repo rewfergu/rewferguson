@@ -1,0 +1,392 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Step from '~/components/ui/Step.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import TechCards from '~/components/widgets/TechCards.astro';
+
+import meandjack from '~/assets/images/meandjack.webp';
+import map from '~/assets/images/map.svg?raw';
+import chapmanLogo from '~/assets/images/chapman.svg?raw';
+import scadLogo from '~/assets/images/scad.svg?raw';
+
+const metadata = {
+  title: 'Robert Ferguson: Software Engineer',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Github', href: 'https://github.com/rewfergu' },
+        { text: 'LinkedIn', href: 'http://www.linkedin.com/in/rewferguson' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Robert Ferguson"
+    tagline="Software Engineer"
+    actions={[{ variant: 'primary', target: '_blank', text: 'Hire me', href: '/' }]}
+  >
+    <Fragment slot="subtitle">
+      My name is Robert Ferguson and I build projects for the web. I've worked in all aspects of design and development
+      since 2006, and my focus at the moment is using TypeScript and React to provide accessible and performant user
+      experiences.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/rewferguson/',
+        },
+      },
+      {
+        icon: 'tabler:brand-github',
+        callToAction: {
+          target: '_blank',
+          text: 'Github',
+          href: 'https://github.com/rewfergu',
+        },
+      },
+      {
+        icon: 'tabler:brand-codepen',
+        callToAction: {
+          target: '_blank',
+          text: 'Codepen',
+          href: 'http://codepen.io/rewfergu',
+        },
+      },
+    ]}
+    image={{
+      src: meandjack,
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+        I grew up in Southern California and attended Chapman Uiversity where I studied film production. After my
+        undergrad I moved to Savannah georgia to attend the Savannah College of Art and Design where I earned my MFA in
+        Interactive Design. My careeer has taken me all over the country. Currently we are in the upper midwest in
+        Appleton Wisconsin.
+      </p>
+
+      <Fragment set:html={map} />
+
+      <p>
+        I have a wife, one son and two dogs that keep me busy. We love the great lakes region and spend a lot of time
+        outdoors.
+      </p>
+
+      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 opacity-20 dark:bg-[rgb(88,202,170)] dark:mix-blend-overlay"></div>
+    </Fragment>
+  </Content>
+
+  <TechCards />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps id="resume" title="Work experience" classes={{ container: 'max-w-3xl' }}>
+    <Step title="Staff Frontend Engineer" company="SetSail" dates="05.2022 - 03.2024" icon="tabler:briefcase">
+      As a staff engineer I developed and supported front end features for our react application and browser extension.
+      I also built and managed the new Sail UI react component library to provide an accessible and consistent user
+      experience across all segments of the application.
+    </Step>
+
+    <Step title="Staff Software Enginner" company="Realtor.com" dates="07.2021 - 05.2022" icon="tabler:briefcase">
+      I designed, built and deployed React components and micro frontends for the Realtor Pro Dashboard product. I also
+      developed and deployed GraphQL endpoints to interface with our shared services and assets. I also helped build and
+      manage the new Harmony UI design system for the BACX teams (Broker, Agent, Concierge experiences) written in React
+      and Storybook.
+    </Step>
+
+    <Step title="Senior Software Engineer" company="Arm / Pelion" dates="04.2020 - 07.2021" icon="tabler:briefcase">
+      After the org shift at Arm, I worked on several teams in the newly created Pelion startup, focusing on Python,
+      Node, and React. I managed the developer site in Django, which published guides, code and swagger api
+      documentation for developing with the Connectivity and Device Management products. I also worked on front end
+      features for the IoT Device Management application in React, and prototyped apis and user interfaces for the new
+      Connected Device Platform, which will be the gateway to the existing Pelion products. I joined Arm to improve the
+      front end code and provide consistency in UX for the Pelion suite of applications. I worked on the Pelion ML
+      machine learning application (python / react), the Pelion Space Analytics application (node / react) and was the
+      primary contributor to the Pelion Design System (typescript). I worked with team members to implement new features
+      using the design system components and helped them improve some of the older features built using bootstrap and
+      other UI libraries.
+    </Step>
+
+    <Step title="Full Stack Software Engineer" company="Instructure" dates="04.2019 ~ 01.2020" icon="tabler:briefcase">
+      I worked on two different teams while at Instructure. On the Bridge career team I built and tested application
+      features in kotlin, spring, Postgres and React. On the MasteryConnect team I refactored front end code for student
+      facing features in React, RxJS and Ruby on Rails
+    </Step>
+
+    <Step
+      title="Instructional Web Manager"
+      company="Austin Community College"
+      dates="09.2017 ~ 04.2019"
+      icon="tabler:briefcase"
+    >
+      I worked at ACC for almost 10 years. I started because I wanted to teach web design, and took an additional part
+      time position for the flexibility and health insurance. I found that I liked the education environment so much I
+      took the first full time position available in Instructional Development as a Multimedia Developer. The position
+      was mostly web development using Flash, PHP, HTML, JavaScript and CSS. A few years later I took on more
+      responsibility as a Web Administrator and the last couple of years I was running my own department called
+      Instructional Web. I helped create the Instructional Web Services department to provide leadership and development
+      for online instructional content. It was a small team of four developers, two designers and two content
+      strategists. I managed design and full stack development (aws, php, mysql, python, js) for instructional
+      divisions.
+    </Step>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 opacity-20 dark:bg-[rgb(88,202,170)] dark:mix-blend-overlay"></div>
+    </Fragment>
+  </Steps>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps id="resume" title="Education" classes={{ container: 'max-w-3xl' }}>
+    <Step
+      title="Master of Fine Arts in Interactive Design"
+      company="Savannah College of Art and Design"
+      dates="2003 - 2006"
+      logo={scadLogo}
+    >
+      I studied interactive design at SCAD and learned how to design and develop websites and applications.
+    </Step>
+
+    <Step
+      title="Bachelor of Fine Arts in Film Production"
+      company="Chapman University"
+      dates="1997 - 2002"
+      logo={chapmanLogo}
+    >
+      I studied film production at Chapman University and learned how to write, direct, shoot and edit films.
+    </Step>
+
+    <!-- Features3 Widget ************** -->
+
+    <!-- <Features3
+    title="Skills"
+    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Graphic design',
+        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+      },
+      {
+        title: 'Branding and identity',
+        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+      },
+      {
+        title: 'User-centered design',
+        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+      },
+      {
+        title: 'Adobe Creative Suite',
+        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+      },
+      {
+        title: 'Typography',
+        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+      },
+      {
+        title: 'Color theory',
+        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+      },
+      {
+        title: 'Print and digital design',
+        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+      },
+      {
+        title: 'Attention to detail',
+        description: 'Diligent in maintaining precision and quality in all design work.',
+      },
+      {
+        title: 'Adaptability',
+        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+      },
+    ]}
+  /> -->
+
+    <!-- Content Widget **************** -->
+
+    <!-- <Content
+    id="porfolio"
+    title="Elevating visual narratives"
+    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+      },
+      {
+        title: 'Role:',
+        description:
+          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+    <!-- Content Widget **************** -->
+
+    <!-- <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+      },
+      {
+        title: 'Role:',
+        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Art and Music Poster Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+    <!-- Content Widget **************** -->
+
+    <!-- <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+      },
+      {
+        title: 'Role:',
+        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+      },
+    ]}
+    image={{
+      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Fashion e-commerce Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+    <!-- CallToAction Widget *********** -->
+
+    <!-- <CallToAction
+    title="Let's create together"
+    subtitle="Ready to transform your vision into captivating designs?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        classes: {
+          subtitle: 'text-page-dark',
+        },
+        href: '/',
+      },
+    ]}
+  /> -->
+
+    <!-- BlogLatestPost Widget **************** -->
+
+    <!-- <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts> -->
+  </Steps>
+</Layout>

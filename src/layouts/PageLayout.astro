@@ -1,0 +1,47 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+
+import { headerData, footerData } from '~/navigation';
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+  </slot>
+  <main>
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
+  <div
+    class="absolute inset-0 dark:mix-blend-color-burn bg-[linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgb(30 50 90) 100%)]"
+    id="p5Canvas"
+  >
+  </div>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+  <script async src="/p5-sketch.js"></script>
+</Layout>
+
+<style is:global>
+  html.dark body {
+    background: linear-gradient(0deg, hsl(181 70% 31% / 1) 0%, rgb(30 50 90) 100%);
+  }
+
+  #p5Canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+</style>

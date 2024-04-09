@@ -1,0 +1,89 @@
+---
+import TSSVG from '~/assets/images/icons/typescript.svg?raw';
+import NodeSVG from '~/assets/images/icons/node.svg?raw';
+import ReactSVG from '~/assets/images/icons/react.svg?raw';
+import PostgresSVG from '~/assets/images/icons/postgres.svg?raw';
+import PythonSVG from '~/assets/images/icons/python.svg?raw';
+import MYSQLSVG from '~/assets/images/icons/mysql.svg?raw';
+import MongoSVG from '~/assets/images/icons/mongodb.svg?raw';
+import GraphQLSVG from '~/assets/images/icons/graphql.svg?raw';
+import DockerSVG from '~/assets/images/icons/docker.svg?raw';
+import NextSVG from '~/assets/images/icons/next.svg?raw';
+
+const h = 188;
+const s = '52%';
+const l = '57%';
+
+const icons = [
+  {
+    name: 'TypeScript',
+    svg: TSSVG,
+  },
+  {
+    name: 'React',
+    svg: ReactSVG,
+  },
+  {
+    name: 'Node',
+    svg: NodeSVG,
+  },
+  {
+    name: 'Next',
+    svg: NextSVG,
+  },
+  {
+    name: 'Python',
+    svg: PythonSVG,
+  },
+  {
+    name: 'PostgreSQL',
+    svg: PostgresSVG,
+  },
+  {
+    name: 'MySQL',
+    svg: MYSQLSVG,
+  },
+  {
+    name: 'MongoDB',
+    svg: MongoSVG,
+  },
+  {
+    name: 'GraphQL',
+    svg: GraphQLSVG,
+  },
+  {
+    name: 'Docker',
+    svg: DockerSVG,
+  },
+];
+
+const techCards = icons.map((icon, index) => {
+  return {
+    svg: icon.svg,
+    name: icon.name,
+    color: `hsl(${h - 4 * index}, ${s}, ${l})`,
+  };
+});
+---
+
+<section class="max-w-3xl mx-auto my-20">
+  <ul class="grid grid-cols-5 grid-rows-2 gap-x-6 gap-y-10">
+    {
+      techCards.map((icon) => (
+        <li class="group">
+          <figure>
+            <div>
+              <div
+                class="aspect-square w-32 p-8 text-white rounded-md shadow-md"
+                style={`background-color: ${icon.color};`}
+              >
+                <Fragment set:html={icon.svg} className="svg" />
+              </div>
+              <figcaption class="text-center">{icon.name}</figcaption>
+            </div>
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+</section>
