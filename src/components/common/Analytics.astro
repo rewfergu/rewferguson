@@ -1,10 +1,10 @@
----
-import { GoogleAnalytics } from '@astrolib/analytics';
-import { ANALYTICS } from 'robertferguson:config';
----
+<script type="text/partytown" async src=`https://www.googletagmanager.com/gtag/js?id=G-5BJF2PLFNV`></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown} />
-  ) : null
-}
+  gtag('config', 'G-5BJF2PLFNV');
+</script>

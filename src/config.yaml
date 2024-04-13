@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: Robert Ferguson
-    template: '%s — Robert Ferguson'
+    template: '%s'
   description: 'A personal site for Robert Ferguson, a software engineer and creative maker.'
   robots:
     index: true

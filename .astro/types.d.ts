@@ -138,104 +138,104 @@ declare module 'astro:content' {
 		"post": {
 };
 "words": {
-"arcade-game.mdx": {
-	id: "arcade-game.mdx";
+"arcade-game.md": {
+	id: "arcade-game.md";
   slug: "arcade-game";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"arduino-web-controller.mdx": {
-	id: "arduino-web-controller.mdx";
+} & { render(): Render[".md"] };
+"arduino-web-controller.md": {
+	id: "arduino-web-controller.md";
   slug: "arduino-web-controller";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"branches.mdx": {
-	id: "branches.mdx";
+} & { render(): Render[".md"] };
+"branches.md": {
+	id: "branches.md";
   slug: "branches";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"drawing-game.mdx": {
-	id: "drawing-game.mdx";
+} & { render(): Render[".md"] };
+"drawing-game.md": {
+	id: "drawing-game.md";
   slug: "drawing-game";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"dynamicat.mdx": {
-	id: "dynamicat.mdx";
+} & { render(): Render[".md"] };
+"dynamicat.md": {
+	id: "dynamicat.md";
   slug: "dynamicat";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"framesqueezer.mdx": {
-	id: "framesqueezer.mdx";
+} & { render(): Render[".md"] };
+"framesqueezer.md": {
+	id: "framesqueezer.md";
   slug: "framesqueezer";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"frank-tank.mdx": {
-	id: "frank-tank.mdx";
+} & { render(): Render[".md"] };
+"frank-tank.md": {
+	id: "frank-tank.md";
   slug: "frank-tank";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"hangman.mdx": {
-	id: "hangman.mdx";
+} & { render(): Render[".md"] };
+"hangman.md": {
+	id: "hangman.md";
   slug: "hangman";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"neighborhood-map.mdx": {
-	id: "neighborhood-map.mdx";
+} & { render(): Render[".md"] };
+"neighborhood-map.md": {
+	id: "neighborhood-map.md";
   slug: "neighborhood-map";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"photo-scrampble.mdx": {
-	id: "photo-scrampble.mdx";
+} & { render(): Render[".md"] };
+"photo-scrampble.md": {
+	id: "photo-scrampble.md";
   slug: "photo-scramble";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"quadcopter.mdx": {
-	id: "quadcopter.mdx";
+} & { render(): Render[".md"] };
+"quadcopter.md": {
+	id: "quadcopter.md";
   slug: "quadcopter";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"timer.mdx": {
-	id: "timer.mdx";
+} & { render(): Render[".md"] };
+"timer.md": {
+	id: "timer.md";
   slug: "timer";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"untitled-water-drop-game.mdx": {
-	id: "untitled-water-drop-game.mdx";
+} & { render(): Render[".md"] };
+"untitled-water-drop-game.md": {
+	id: "untitled-water-drop-game.md";
   slug: "untitled-water-drop-game";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
-"weather-lamp.mdx": {
-	id: "weather-lamp.mdx";
+} & { render(): Render[".md"] };
+"weather-lamp.md": {
+	id: "weather-lamp.md";
   slug: "weather-lamp";
   body: string;
   collection: "words";
   data: any
-} & { render(): Render[".mdx"] };
+} & { render(): Render[".md"] };
 };
 "work": {
 "acc-catalog.mdx": {
