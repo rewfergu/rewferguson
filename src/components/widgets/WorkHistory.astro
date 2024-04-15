@@ -1,10 +1,12 @@
 ---
 import Steps from '~/components/widgets/Steps.astro';
 import Step from '~/components/ui/Step.astro';
+import ArcDivider from '~/components/ui/ArcDivider.astro';
+import WorkStep from '~/components/ui/WorkStep.astro';
 ---
 
 <Steps id="resume" title="Work History" classes={{ container: 'max-w-3xl' }}>
-  <Step title="Staff Frontend Engineer" company="SetSail" dates="05.2022 - 03.2024" icon="tabler:briefcase">
+  <WorkStep title="Staff Frontend Engineer" company="SetSail" dates="05.2022 - 03.2024" icon="tabler:briefcase">
     <ul class="text-primary">
       <li>
         <a href="https://setsail.co" target="_blank" rel="noopener"> SetSail</a>
@@ -15,9 +17,9 @@ import Step from '~/components/ui/Step.astro';
       I also built and managed the new Sail UI react component library to provide an accessible and consistent user
       experience across all segments of the application.
     </p>
-  </Step>
+  </WorkStep>
 
-  <Step title="Staff Software Enginner" company="Realtor.com" dates="07.2021 - 05.2022" icon="tabler:briefcase">
+  <WorkStep title="Staff Software Enginner" company="Realtor.com" dates="07.2021 - 05.2022" icon="tabler:briefcase">
     <ul class="text-primary">
       <li>
         <a href="https://realtor.com" target="_blank" rel="noopener"> Realtor Pro Dashboard </a>
@@ -29,9 +31,9 @@ import Step from '~/components/ui/Step.astro';
       manage the new Harmony UI design system for the BACX teams (Broker, Agent, Concierge experiences) written in React
       and Storybook.
     </p>
-  </Step>
+  </WorkStep>
 
-  <Step title="Senior Software Engineer" company="Arm / Pelion" dates="04.2020 - 07.2021" icon="tabler:briefcase">
+  <WorkStep title="Senior Software Engineer" company="Arm / Pelion" dates="04.2020 - 07.2021" icon="tabler:briefcase">
     <ul class="text-primary">
       <li>
         <a href="https://pelion.com" target="_blank" rel="noopener"> Pelion IoT Platform </a>
@@ -52,9 +54,14 @@ import Step from '~/components/ui/Step.astro';
       features for the IoT Device Management application in React, and prototyped apis and user interfaces for the new
       Connected Device Platform, which will be the gateway to the existing Pelion products.
     </p>
-  </Step>
+  </WorkStep>
 
-  <Step title="Full Stack Software Engineer" company="Instructure" dates="04.2019 ~ 01.2020" icon="tabler:briefcase">
+  <WorkStep
+    title="Full Stack Software Engineer"
+    company="Instructure"
+    dates="04.2019 ~ 01.2020"
+    icon="tabler:briefcase"
+  >
     <ul class="text-primary">
       <li>
         <a href="https://www.getbridge.com/" target="_blank" rel="noopener">
@@ -72,9 +79,9 @@ import Step from '~/components/ui/Step.astro';
       features in kotlin, spring, Postgres and React. On the MasteryConnect team I refactored front end code for student
       facing features in React, RxJS and Ruby on Rails
     </p>
-  </Step>
+  </WorkStep>
 
-  <Step
+  <WorkStep
     title="Instructional Web Manager"
     company="Austin Community College"
     dates="09.2017 ~ 04.2019"
@@ -94,7 +101,7 @@ import Step from '~/components/ui/Step.astro';
       and two content strategists. I managed design and full stack development (aws, php, mysql, python, js) for
       instructional divisions.
     </p>
-  </Step>
+  </WorkStep>
 
   <Fragment slot="bg">
     <div

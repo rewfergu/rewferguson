@@ -35,7 +35,9 @@ const {
 
       {
         items.length > 0 ? (
-          <Timeline items={items} classes={classes?.items as {}} />
+          <>
+            <Timeline items={items} classes={classes?.items as {}} />
+          </>
         ) : (
           <div>
             <slot />
