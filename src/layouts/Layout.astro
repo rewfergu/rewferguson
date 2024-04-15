@@ -34,8 +34,11 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <Analytics />
 
-    <ViewTransitions fallback="swap" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BJF2PLFNV"></script>
+    <script is:inline src="/public/gAnalytics.js"></script>
   </head>
+
+  <ViewTransitions fallback="swap" />
 
   <body class="antialiased text-default bg-page tracking-tight">
     <slot />

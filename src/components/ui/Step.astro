@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
+import arc from '~/assets/images/arc-pattern.svg?raw';
 
 const { title, company, dates, icon, logo } = Astro.props;
 ---
@@ -20,7 +21,9 @@ const { title, company, dates, icon, logo } = Astro.props;
         }
       </div>
     </div>
-    <div class="w-px h-full bg-black/10 dark:bg-primary group-last:opacity-0"></div>
+    <div class="flex items-start h-full group-last:opacity-0 w-4 arcContainer text-black/10 dark:text-primary">
+      <Fragment set:html={arc} height="100%" />
+    </div>
   </div>
   <div>
     <div class="text-xl font-bold" set:html={title} />
@@ -31,3 +34,21 @@ const { title, company, dates, icon, logo } = Astro.props;
     </div>
   </div>
 </div>
+
+<!-- <script>
+  (() => {
+    const arcContainer = document.querySelector('.arcContainer');
+    if (arcContainer === null) return;
+
+    const containerHeight = arcContainer.clientHeight;
+    console.log('containerHeight', containerHeight);
+    const arc = arcContainer.querySelector('svg');
+
+    if (arc === null) return;
+
+    // arc.setAttribute('height', arcContainer.clientHeight.toString());
+    const viewBox = arc.getAttribute('viewBox').split(' ');
+    viewBox[3] = containerHeight * 2;
+    arc.setAttribute('viewBox', viewBox.join(' '));
+  })();
+</script> -->
