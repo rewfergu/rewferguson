@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="arcGraphic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-  viewBox="0 0 288 560">
+  width="100%" height="100%">
   <defs>
     <style>
       .arcStyle {
@@ -15,7 +15,7 @@
       }
     </style>
     <pattern id="arcPattern" x="0" y="0" height="17.25" width="80.85" patternUnits="userSpaceOnUse"
-      viewBox="0 -2 161.7 34.5" patternTransform="scale(0.25)">
+      viewBox="0 -2 161.7 34.5" patternTransform="scale(0.65)">
       <g x="0" y="2">
         <g id="arc">
           <path class="arcStyle" d="M0,11.1s1.6-.9,4.4-2.3" />
@@ -25,5 +25,5 @@
       </g>
     </pattern>
   </defs>
-  <rect class="cls-2" height="4" width="100%" fill="url(#arcPattern)" />
+  <rect class="cls-2" height="10" width="100%" fill="url(#arcPattern)" />
 </svg>
