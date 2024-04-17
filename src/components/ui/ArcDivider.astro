@@ -1,7 +1,11 @@
 ---
 import arc from '/arc-pattern.svg?raw';
+import arcHorizontal from '/arc-pattern-horizontal.svg?raw';
+const { orientation } = Astro.props;
 ---
 
-<div class="flex items-start h-full group-last:opacity-0 w-4 arcContainer text-black/10 dark:text-primary">
-  <Fragment set:html={arc} height="100%" />
+<div
+  class=`flex items-start h-full group-last:opacity-0 w-4 arcContainer text-black/10 dark:text-primary ${Astro.props.class}`
+>
+  <Fragment set:html={orientation === 'horizontal' ? arcHorizontal : arc} height="100%" />
 </div>

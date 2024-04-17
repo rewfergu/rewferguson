@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="arcGraphic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+  viewBox="0 0 288 560">
+  <defs>
+    <style>
+      .arcStyle {
+        fill: none;
+        stroke: currentColor;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .arcDash {
+        stroke-dasharray: 0 0 10.1 4;
+      }
+    </style>
+    <pattern id="arcPattern" x="0" y="0" height="17.25" width="80.85" patternUnits="userSpaceOnUse"
+      viewBox="0 -2 161.7 34.5" patternTransform="scale(0.25)">
+      <g x="0" y="2">
+        <g id="arc">
+          <path class="arcStyle" d="M0,11.1s1.6-.9,4.4-2.3" />
+          <path class="arcStyle arcDash" d="M8.1,7.2c14.1-5.9,44.4-14.5,72.7,3.9,30,19.5,61.5,9.1,74.6,3.2" />
+          <path class="arcStyle" d="M157.3,13.5c2.8-1.4,4.4-2.3,4.4-2.3" />
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="cls-2" height="4" width="100%" fill="url(#arcPattern)" />
+</svg>

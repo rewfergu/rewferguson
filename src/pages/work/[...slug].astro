@@ -6,6 +6,7 @@ import ProjectTags from '~/components/widgets/ProjectTags.astro';
 import ProjectImages from '~/components/widgets/ProjectImages.astro';
 import YoutubeVideo from '~/components/common/YoutubeVideo.astro';
 import { getCollection } from 'astro:content';
+import ArcDivider from '~/components/ui/ArcDivider.astro';
 
 export const prerender = true;
 
@@ -31,7 +32,7 @@ const { Content } = await entry.render();
           entry.data.cover ? (
             <Image
               src={entry.data.cover.src}
-              class="max-w-full lg:max-w-[900px] mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+              class="max-w-full lg:max-w-[900px] mx-auto mb-12 sm:rounded-md bg-gray-400 dark:bg-slate-700"
               widths={[400, 900]}
               sizes="(max-width: 900px) 400px, 900px"
               alt={entry.data.cover.alt || ''}
@@ -47,8 +48,9 @@ const { Content } = await entry.render();
           )
         }
 
-        <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-light font-heading uppercase">
+        <h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-semibold font-heading uppercase">
           {entry.data.name}
+          <ArcDivider orientation="horizontal" class="w-full pt-4 h-4" />
         </h1>
       </header>
       <div
