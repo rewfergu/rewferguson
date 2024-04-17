@@ -52,7 +52,7 @@ const { Content } = await entry.render();
       >
         <Content />
 
-        <ProjectTags tags={entry.data.tags} />
+        <ProjectTags tags={entry.data.tags || []} />
         {
           entry.data.video &&
             entry.data.video.map((vid: string) => <YoutubeVideo videoId={vid.split('youtu.be/')[1]} />)

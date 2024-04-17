@@ -135,9 +135,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"post": {
-};
-"words": {
+		"words": {
 "arcade-game.md": {
 	id: "arcade-game.md";
   slug: "arcade-game";
@@ -194,13 +192,13 @@ declare module 'astro:content' {
   collection: "words";
   data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
-"its-alive/index.md": {
-	id: "its-alive/index.md";
+"its-alive/index.mdx": {
+	id: "its-alive/index.mdx";
   slug: "its-alive";
   body: string;
   collection: "words";
   data: InferEntrySchema<"words">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "neighborhood-map.md": {
 	id: "neighborhood-map.md";
   slug: "neighborhood-map";
