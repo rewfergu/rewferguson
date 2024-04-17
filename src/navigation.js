@@ -19,11 +19,26 @@ export async function getHeaderData() {
       href: `/work/${page.slug}`,
     }));
 
+  const wordsCollection = await getCollection('words');
+  const wordsPages = wordsCollection
+    .filter((page) => !!page.data.date)
+    .sort(
+      ({ data: { date: dateA } }, { data: { date: dateB } }) => new Date(dateB).getTime() - new Date(dateA).getTime()
+    )
+    .map((page) => ({
+      text: page.data.name,
+      href: `/blog/${page.slug}`,
+    }));
+
   return {
     links: [
       {
         text: 'Work',
         links: workPages,
+      },
+      {
+        text: 'Blog',
+        links: wordsPages,
       },
       ...headerData.links,
     ],

@@ -1,3 +1,4 @@
+import { date } from 'astro/zod';
 import { z, defineCollection } from 'astro:content';
 
 const metadataDefinition = () =>
@@ -45,23 +46,24 @@ const metadataDefinition = () =>
     })
     .optional();
 
-const postCollection = defineCollection({
+const wordsCollection = defineCollection({
   schema: z.object({
-    publishDate: z.date().optional(),
-    updateDate: z.date().optional(),
-    draft: z.boolean().optional(),
-
-    title: z.string(),
-    excerpt: z.string().optional(),
-    image: z.string().optional(),
-
-    category: z.string().optional(),
+    name: z.string(),
+    date: z.date().optional(),
+    featured: z.boolean().optional(),
+    cover: z
+      .object({
+        src: z.string(),
+        alt: z.string().optional(),
+      })
+      .optional(),
     tags: z.array(z.string()).optional(),
-    author: z.string().optional(),
-
+    images: z.array(z.object({ src: z.string(), alt: z.string().optional() })).optional(),
+    link: z.string().optional(),
+    video: z.array(z.string()).optional(),
+    draft: z.boolean().optional(),
+    excerpt: z.string().optional(),
     metadata: metadataDefinition(),
-
-    priority: z.number().optional(),
   }),
 });
 
@@ -86,6 +88,6 @@ const workCollection = defineCollection({
 });
 
 export const collections = {
-  post: postCollection,
+  words: wordsCollection,
   work: workCollection,
 };

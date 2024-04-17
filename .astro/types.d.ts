@@ -143,98 +143,105 @@ declare module 'astro:content' {
   slug: "arcade-game";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "arduino-web-controller.md": {
 	id: "arduino-web-controller.md";
   slug: "arduino-web-controller";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "branches.md": {
 	id: "branches.md";
   slug: "branches";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "drawing-game.md": {
 	id: "drawing-game.md";
   slug: "drawing-game";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "dynamicat.md": {
 	id: "dynamicat.md";
   slug: "dynamicat";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "framesqueezer.md": {
 	id: "framesqueezer.md";
   slug: "framesqueezer";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "frank-tank.md": {
 	id: "frank-tank.md";
   slug: "frank-tank";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "hangman.md": {
 	id: "hangman.md";
   slug: "hangman";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
+} & { render(): Render[".md"] };
+"its-alive/index.md": {
+	id: "its-alive/index.md";
+  slug: "its-alive";
+  body: string;
+  collection: "words";
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "neighborhood-map.md": {
 	id: "neighborhood-map.md";
   slug: "neighborhood-map";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "photo-scrampble.md": {
 	id: "photo-scrampble.md";
   slug: "photo-scramble";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "quadcopter.md": {
 	id: "quadcopter.md";
   slug: "quadcopter";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "timer.md": {
 	id: "timer.md";
   slug: "timer";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "untitled-water-drop-game.md": {
 	id: "untitled-water-drop-game.md";
   slug: "untitled-water-drop-game";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 "weather-lamp.md": {
 	id: "weather-lamp.md";
   slug: "weather-lamp";
   body: string;
   collection: "words";
-  data: any
+  data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
 };
 "work": {
