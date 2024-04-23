@@ -1,8 +1,6 @@
 ---
-// import { Icon } from 'astro-icon/components';
-// import { SITE } from 'robertferguson:config';
-// import { getHomePermalink } from '~/utils/permalinks';
-import wisconsinSVG from '~/assets/images/wisconsin.svg?raw';
+// import wisconsinSVG from '~/assets/images/wisconsin.svg?raw';
+import logoSvg from '~/assets/images/logo-min.svg?raw';
 
 interface Link {
   text?: string;
@@ -35,8 +33,8 @@ const { theme = 'light' } = Astro.props;
 >
   <div class="dark:bg-dark bg-[#58bbca] absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
-    <div class="w-12 mx-auto py-8 opacity-50 text-page">
-      <Fragment set:html={wisconsinSVG} />
+    <div class="w-12 mx-auto py-8 opacity-50 text-black">
+      <Fragment set:html={logoSvg} />
     </div>
   </div>
 </footer>
