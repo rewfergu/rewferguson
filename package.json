@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run copy",
     "preview": "astro preview",
     "astro": "astro",
     "export": "touch out/.nojekyll && cp ./CNAME out/CNAME",
