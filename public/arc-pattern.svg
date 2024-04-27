@@ -20,5 +20,5 @@
       </g>
     </pattern>
   </defs>
-  <rect width="35" height="100%" fill="url(#arcPattern)" />
+  <rect width="15" height="100%" fill="url(#arcPattern)" />
 </svg>
