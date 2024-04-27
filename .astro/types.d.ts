@@ -206,6 +206,13 @@ declare module 'astro:content' {
   collection: "words";
   data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
+"obsidian.md": {
+	id: "obsidian.md";
+  slug: "obsidian";
+  body: string;
+  collection: "words";
+  data: InferEntrySchema<"words">
+} & { render(): Render[".md"] };
 "photo-scrampble.md": {
 	id: "photo-scrampble.md";
   slug: "photo-scramble";
