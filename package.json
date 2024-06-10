@@ -16,12 +16,12 @@
     "images": "node processImages.js"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.5",
     "@astrolib/seo": "^1.0.0-beta.5",
     "@fontsource-variable/inter": "^5.0.17",
     "@fontsource-variable/montserrat": "^5.0.18",
-    "astro": "^4.5.12",
+    "astro": "^4.10.1",
     "astro-icon": "^1.1.0",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
@@ -29,8 +29,8 @@
     "unpic": "^3.18.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.2.2",
-    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/partytown": "^2.1.0",
     "@astrojs/tailwind": "5.1.0",
     "@iconify-json/flat-color-icons": "^1.1.10",
     "@iconify-json/tabler": "^1.1.109",
