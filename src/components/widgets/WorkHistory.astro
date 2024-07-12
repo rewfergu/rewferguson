@@ -6,7 +6,27 @@ import WorkStep from '~/components/ui/WorkStep.astro';
 ---
 
 <Steps id="resume" title="Work History" classes={{ container: 'max-w-3xl' }}>
-  <WorkStep title="Staff Frontend Engineer" company="SetSail" dates="05.2022 - 03.2024" icon="tabler:briefcase">
+  <WorkStep title="Software Engineer" company="ZoomInfo" dates="06.2024 - Present" icon="tabler:briefcase">
+    <ul class="text-primary">
+      <li>
+        <a href="https://zoominfo.com" target="_blank" rel="noopener">ZoomInfo</a>
+      </li>
+    </ul>
+
+    <p>
+      After SetSail was acquired by ZoomInfo I moved over to the team working on the Marketing application. ZoomInfo
+      Marketing is an angular application that provides customers with industry and user intent data in order to better
+      target their online advertising. As a part of that team I worked on full stack features using Angular, NestJS,
+      Node and TypeScript.
+    </p>
+  </WorkStep>
+
+  <WorkStep
+    title="Staff Frontend Engineer"
+    company="SetSail (acquired by ZoomInfo)"
+    dates="05.2022 - 03.2024"
+    icon="tabler:briefcase"
+  >
     <ul class="text-primary">
       <li>
         <a href="https://setsail.co" target="_blank" rel="noopener"> SetSail</a>
