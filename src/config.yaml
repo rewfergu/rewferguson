@@ -70,9 +70,9 @@ ui:
   tokens:
     default:
       fonts:
-        sans: MontserratVariable
-        serif: MontserratVariable
-        heading: MontserratVariable
+        sans: Montserrat Variable
+        serif: Montserrat Variable
+        heading: Comfortaa Variable
       colors:
         default: rgb(16 16 16)
         dark: rgb(3 6 32)
