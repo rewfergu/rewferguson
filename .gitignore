@@ -4,3 +4,4 @@ node_modules
 public/images/projects
 dist
 .obsidian
+.syncthing.*
