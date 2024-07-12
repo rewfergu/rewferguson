@@ -29,8 +29,8 @@ const { divider = await Astro.slots.render('divider'), title, company, dates, ic
     }
   </div>
   <div>
-    <div class="text-xl font-bold" set:html={title} />
-    <div class="text-xl font-normal" set:html={company} />
+    <div class="text-2xl font-bold font-heading" set:html={title} />
+    <div class="text-xl font-normal font-heading" set:html={company} />
     <div set:html={dates} />
     <div class="mt-4 mb-12 text-md">
       <slot />
