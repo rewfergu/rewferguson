@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "words";
   data: InferEntrySchema<"words">
 } & { render(): Render[".md"] };
+"geojson-vs-gpx.md": {
+	id: "geojson-vs-gpx.md";
+  slug: "geojson-vs-gpx";
+  body: string;
+  collection: "words";
+  data: InferEntrySchema<"words">
+} & { render(): Render[".md"] };
 "hangman.md": {
 	id: "hangman.md";
   slug: "hangman";
