@@ -3,6 +3,8 @@ import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
 import logoSvg from '~/assets/images/logo-min.svg?raw';
+import Nav from '../widgets/Nav.astro';
+import { getHeaderData } from '~/navigation';
 
 export interface Props {
   id?: string;
@@ -23,6 +25,8 @@ const {
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
 } = Astro.props;
+
+const headerData = await getHeaderData();
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
@@ -50,6 +54,10 @@ const {
             />
           )
         }
+
+        <div class="flex justify-center">
+          <Nav {...headerData} />
+        </div>
 
         <div class="max-w-3xl mx-auto">
           {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
