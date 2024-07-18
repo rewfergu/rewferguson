@@ -45,11 +45,11 @@
 }
 
 #header {
-  @apply top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out opacity-0;
+  @apply top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out opacity-0 h-0;
 }
 
 #header.scroll {
-  @apply opacity-100;
+  @apply opacity-100 h-auto;
 }
 
 #header.scroll > div:first-child {
