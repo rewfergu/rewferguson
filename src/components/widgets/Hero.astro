@@ -52,9 +52,9 @@ import nameLogo from '~/assets/images/name.svg?raw';
         }
 
         <div class="bg-black p-8 rounded-2xl bg-opacity-25 max-w-[900px] mx-auto">
-          <div class="flex justify-center">
-            <Nav {...headerData} />
-          </div>
+          <!-- <div class="justify-center hidden md:flex">
+            <Nav {...headerData} className="bodyNav" />
+          </div> -->
 
           <div class="max-w-3xl mx-auto">
             {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
