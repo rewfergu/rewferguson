@@ -32,7 +32,7 @@ const { language, textDirection } = I18N;
     <ApplyColorMode />
     <Metadata {...metadata} />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BJF2PLFNV"></script>
+    <Analytics />
     <script is:inline src="/gAnalytics.js"></script>
   </head>
 
@@ -46,6 +46,18 @@ const { language, textDirection } = I18N;
     <style is:global>
       img {
         content-visibility: auto;
+      }
+      img,
+      pre,
+      table,
+      iframe,
+      video,
+      canvas,
+      svg {
+        max-width: 100%;
+      }
+      body {
+        overflow-x: hidden;
       }
     </style>
   </body>
