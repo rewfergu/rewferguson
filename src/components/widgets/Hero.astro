@@ -102,26 +102,52 @@ import nameLogo from '~/assets/images/name.svg?raw';
   </div>
 </section>
 
-<script>
-  const heroNameLogo = document.getElementById('hero-name-logo');
-  const logoName = document.querySelector('.logo-name') as HTMLElement | null;
+<style is:global>
+  /* Only present on pages with Hero — hides header logo name before JS runs,
+     since the hero is always in view on initial load. */
+  .logo-name {
+    max-width: 0;
+    opacity: 0;
+  }
+</style>
 
-  if (heroNameLogo && logoName) {
-    const naturalWidth = logoName.scrollWidth + 'px';
-    logoName.style.maxWidth = naturalWidth;
+<script is:inline>
+  (function () {
+    var heroNameLogo = document.getElementById('hero-name-logo');
+    var logoName = document.querySelector('.logo-name');
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    if (!heroNameLogo || !logoName) return;
+
+    // CSS already hides the logo. Measure natural width once on first reveal
+    // by briefly removing max-width with transitions suppressed.
+    var naturalWidth = null;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        var entry = entries[0];
         if (entry.isIntersecting) {
-          logoName.style.opacity = '0';
           logoName.style.maxWidth = '0';
+          logoName.style.opacity = '0';
         } else {
-          logoName.style.opacity = '';
-          logoName.style.maxWidth = naturalWidth;
+          if (!naturalWidth) {
+            logoName.style.transition = 'none';
+            logoName.style.maxWidth = 'none';
+            naturalWidth = logoName.scrollWidth + 'px';
+            logoName.style.maxWidth = '0';
+            // Re-enable transition next frame so the expand animates
+            requestAnimationFrame(function () {
+              logoName.style.transition = '';
+              logoName.style.maxWidth = naturalWidth;
+              logoName.style.opacity = '1';
+            });
+          } else {
+            logoName.style.maxWidth = naturalWidth;
+            logoName.style.opacity = '1';
+          }
         }
       },
       { threshold: 0 }
     );
     observer.observe(heroNameLogo);
-  }
+  })();
 </script>

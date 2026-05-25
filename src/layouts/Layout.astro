@@ -31,12 +31,12 @@ const { language, textDirection } = I18N;
     <CustomStyles />
     <ApplyColorMode />
     <Metadata {...metadata} />
-
+    <link rel="preload" href="/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/comfortaa-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <ViewTransitions fallback="swap" />
     <Analytics />
     <script is:inline src="/gAnalytics.js"></script>
   </head>
-
-  <ViewTransitions fallback="swap" />
 
   <body class="antialiased text-default bg-page tracking-tight">
     <slot />
@@ -44,9 +44,6 @@ const { language, textDirection } = I18N;
     <BasicScripts />
 
     <style is:global>
-      img {
-        content-visibility: auto;
-      }
       img,
       pre,
       table,

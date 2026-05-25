@@ -79,7 +79,7 @@ html.dark #header .background {
 } */
 
 .headerNav {
-  @apply: hidden md:flex;
+  @apply hidden md:flex;
 }
 
 #header.expanded .headerNav {
@@ -89,7 +89,7 @@ html.dark #header .background {
   right: 0;
   bottom: 70px !important;
   padding: 0 5px;
-  @apply: bg-page md:bg-[#01253f];
+  @apply bg-page;
 }
 
 .bodyNav {
