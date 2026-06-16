@@ -1,5 +1,5 @@
-import { date } from 'astro/zod';
 import { z, defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const metadataDefinition = () =>
   z
@@ -47,6 +47,7 @@ const metadataDefinition = () =>
     .optional();
 
 const wordsCollection = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/words' }),
   schema: z.object({
     name: z.string(),
     date: z.date().optional(),
@@ -68,7 +69,7 @@ const wordsCollection = defineCollection({
 });
 
 const workCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/work' }),
   schema: z.object({
     name: z.string(),
     status: z.number().optional(),

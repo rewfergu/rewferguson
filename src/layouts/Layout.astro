@@ -8,10 +8,10 @@ import Favicons from '~/components/Favicons.astro';
 import CustomStyles from '~/components/CustomStyles.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
-import SiteVerification from '~/components/common/SiteVerification.astro';
+// import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
 
@@ -33,7 +33,7 @@ const { language, textDirection } = I18N;
     <Metadata {...metadata} />
     <link rel="preload" href="/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/comfortaa-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <ViewTransitions fallback="swap" />
+    <!-- <ViewTransitions fallback="swap" /> -->
     <Analytics />
     <script is:inline src="/gAnalytics.js"></script>
   </head>

@@ -5,7 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import ProjectTags from '~/components/widgets/ProjectTags.astro';
 import ProjectImages from '~/components/widgets/ProjectImages.astro';
 import YoutubeVideo from '~/components/common/YoutubeVideo.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ArcDivider from '~/components/ui/ArcDivider.astro';
 
 export const prerender = true;
@@ -13,7 +13,7 @@ export const prerender = true;
 export async function getStaticPaths() {
   const blogEntries = await getCollection('work');
   return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Layout>

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "cover": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string"
+        },
+        "alt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "src"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "src"
+        ]
+      }
+    },
+    "link": {
+      "type": "string"
+    },
+    "video": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "draft": {
+      "type": "boolean"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "ignoreTitleTemplate": {
+          "type": "boolean"
+        },
+        "canonical": {
+          "type": "string",
+          "format": "uri"
+        },
+        "robots": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "boolean"
+            },
+            "follow": {
+              "type": "boolean"
+            }
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "openGraph": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "siteName": {
+              "type": "string"
+            },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "number"
+                  },
+                  "height": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "url"
+                ]
+              }
+            },
+            "locale": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
+        "twitter": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "site": {
+              "type": "string"
+            },
+            "cardType": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

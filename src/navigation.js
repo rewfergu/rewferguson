@@ -16,7 +16,7 @@ export async function getHeaderData() {
     .sort(({ data: { priority: priorityA = 999 } }, { data: { priority: priorityB = 999 } }) => priorityA - priorityB)
     .map((page) => ({
       text: page.data.name,
-      href: `/work/${page.slug}`,
+      href: `/work/${page.id}`,
     }));
 
   const wordsCollection = await getCollection('words');
@@ -27,7 +27,7 @@ export async function getHeaderData() {
     )
     .map((page) => ({
       text: page.data.name,
-      href: `/blog/${page.slug}`,
+      href: `/blog/${page.id}`,
     }));
 
   return {
