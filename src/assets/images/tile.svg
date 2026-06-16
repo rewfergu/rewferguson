@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <defs>
+    <g id="motif" transform="translate(0.000 0.000) scale(0.600000)">
+      <g fill="#0e7c6b" stroke="none" style="color:#0e7c6b">
+        <defs xmlns="http://www.w3.org/2000/svg">
+          <style>
+            .cls-1 {
+              fill: #283892;
+            }
+
+            .cls-2 {
+              fill: none;
+              stroke: #fff;
+              stroke-miterlimit: 10;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <rect xmlns="http://www.w3.org/2000/svg" class="cls-1" width="40" height="40"></rect>
+        <line xmlns="http://www.w3.org/2000/svg" class="cls-2" x1="20" x2="20" y2="40"></line>
+        <line xmlns="http://www.w3.org/2000/svg" class="cls-2" x1="40" y1="20" y2="20"></line>
+      </g>
+    </g>
+    <pattern id="pat" patternUnits="userSpaceOnUse" width="24.000" height="24.000">
+      <use href="#motif" x="-24.000" y="-24.000" />
+      <use href="#motif" x="-24.000" y="0.000" />
+      <use href="#motif" x="-24.000" y="24.000" />
+      <use href="#motif" x="0.000" y="-24.000" />
+      <use href="#motif" x="0.000" y="0.000" />
+      <use href="#motif" x="0.000" y="24.000" />
+      <use href="#motif" x="24.000" y="-24.000" />
+      <use href="#motif" x="24.000" y="0.000" />
+      <use href="#motif" x="24.000" y="24.000" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#f3efe7" />
+  <rect width="100%" height="100%" fill="url(#pat)" />
+</svg>

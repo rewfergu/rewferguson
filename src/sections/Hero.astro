@@ -6,6 +6,7 @@ import logoSvg from '~/assets/images/logo-min.svg?raw';
 import Nav from '../widgets/Nav.astro';
 import { getHeaderData } from '~/navigation';
 import RobertFerguson from '~/assets/images/robert-ferguson-min.svg?raw';
+import Tile from '~/assets/images/tile.svg';
 
 export interface Props {
   id?: string;
@@ -32,7 +33,12 @@ import nameLogo from '~/assets/images/name.svg?raw';
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div
+    class="absolute inset-0 pointer-events-none opacity-20 dark:opacity-10"
+    aria-hidden="true"
+    style={`background-image: url('${Tile.src}'); background-repeat: repeat; background-size: auto;`}
+  >
+  </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
@@ -40,9 +46,9 @@ import nameLogo from '~/assets/images/name.svg?raw';
         <div id="hero-name-logo" class="max-w-[640px] mx-auto flex justify-center">
           <Fragment set:html={RobertFerguson} />
         </div>
-        <div class="w-16 mx-auto my-4">
+        <!-- <div class="w-16 mx-auto my-4">
           <Fragment set:html={logoSvg} />
-        </div>
+        </div> -->
         {
           tagline && (
             <p
