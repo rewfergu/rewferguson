@@ -1,0 +1,85 @@
+(node:69245) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[astro] `markdown.remarkPlugins`, `markdown.rehypePlugins`, and `markdown.remarkRehype` are deprecated. Pass them to `unified({...})` from `@astrojs/markdown-remark` directly instead.
+{"message":"RobertFerguson `src/config.yaml` has been loaded.","label":"robertferguson","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Astro config changed","label":"content","level":"info"}
+{"message":"Astro version changed","label":"content","level":"info"}
+{"message":"Clearing content store","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.3.3 ready in 1251 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"Loaded icons from flat-color-icons, tabler","label":"astro-icon","level":"info"}
+{"message":"[200] / 374ms","label":null,"level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"out/404.html","label":"watch","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"out/blog/untitled-water-drop-game/index.html","label":"watch","level":"info"}
+{"message":"out/blog/neighborhood-map/index.html","label":"watch","level":"info"}
+{"message":"out/blog/geojson-vs-gpx/index.html","label":"watch","level":"info"}
+{"message":"out/blog/weather-lamp/index.html","label":"watch","level":"info"}
+{"message":"out/blog/photo-scramble/index.html","label":"watch","level":"info"}
+{"message":"out/blog/storyroute/index.html","label":"watch","level":"info"}
+{"message":"out/blog/timer/index.html","label":"watch","level":"info"}
+{"message":"out/blog/hangman/index.html","label":"watch","level":"info"}
+{"message":"out/blog/framesqueezer/index.html","label":"watch","level":"info"}
+{"message":"out/blog/its-alive/index.html","label":"watch","level":"info"}
+{"message":"out/blog/arduino-web-controller/index.html","label":"watch","level":"info"}
+{"message":"out/blog/frank-tank/index.html","label":"watch","level":"info"}
+{"message":"out/blog/drawing-game/index.html","label":"watch","level":"info"}
+{"message":"out/blog/arcade-game/index.html","label":"watch","level":"info"}
+{"message":"out/blog/branches/index.html","label":"watch","level":"info"}
+{"message":"out/blog/obsidian/index.html","label":"watch","level":"info"}
+{"message":"out/blog/dynamicat/index.html","label":"watch","level":"info"}
+{"message":"out/blog/quadcopter/index.html","label":"watch","level":"info"}
+{"message":"out/index.html","label":"watch","level":"info"}
+{"message":"out/work/notecode/index.html","label":"watch","level":"info"}
+{"message":"out/work/sail-ui/index.html","label":"watch","level":"info"}
+{"message":"out/work/setsail/index.html","label":"watch","level":"info"}
+{"message":"out/work/acc-online/index.html","label":"watch","level":"info"}
+{"message":"out/work/iw-wordpress-theme/index.html","label":"watch","level":"info"}
+{"message":"out/work/budget-tracker/index.html","label":"watch","level":"info"}
+{"message":"out/work/todoredo/index.html","label":"watch","level":"info"}
+{"message":"out/work/acc-catalog/index.html","label":"watch","level":"info"}
+{"message":"out/work/flip-draw/index.html","label":"watch","level":"info"}
+{"message":"out/work/photo-search/index.html","label":"watch","level":"info"}
+{"message":"out/work/sounddeck/index.html","label":"watch","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
