@@ -1516,32 +1516,33 @@ const techCards = icons.map((icon, index) => {
     >
   </div>
   <section class="relative max-w-3xl mx-auto px-4 py-20">
-    <Headline
-      title="Technologies"
-      }
-      classes={{
-        container: 'text-left rtl:text-right',
-        title: 'text-3xl lg:text-4xl',
-      }}
-    />
-    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-2 gap-x-6 gap-y-10">
-      {
-        techCards.map((icon) => (
-          <li class="group">
-            <figure class="flex flex-col">
-              <div class="mx-auto">
-                <div
-                  class="aspect-square w-32 p-8 text-white rounded-md shadow-md"
-                  style={`background-color: ${icon.color};`}
-                >
-                  <Fragment set:html={icon.svg} className="svg" />
+    <div class="bg-[#ec2d82] p-8 rounded-lg shadow-lg">
+      <Headline
+        title="Technologies"
+        classes={{
+          container: 'text-left rtl:text-right',
+          title: 'text-3xl lg:text-4xl',
+        }}
+      />
+      <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 grid-rows-2 gap-x-6 gap-y-10">
+        {
+          techCards.map((icon) => (
+            <li class="group">
+              <figure class="flex flex-col">
+                <div class="mx-auto">
+                  <div
+                    class="aspect-square w-28 p-4 text-white rounded-md shadow-md"
+                    style={`background-color: ${icon.color};`}
+                  >
+                    <Fragment set:html={icon.svg} className="svg" />
+                  </div>
+                  <figcaption class="text-center">{icon.name}</figcaption>
                 </div>
-                <figcaption class="text-center">{icon.name}</figcaption>
-              </div>
-            </figure>
-          </li>
-        ))
-      }
-    </ul>
+              </figure>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </section>
 </div>
