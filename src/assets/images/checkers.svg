@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480"><defs><g id="motif" transform="translate(0.000 0.000) scale(1.000000)"><g fill="#0e7c6b" stroke="none" style="color:#0e7c6b"><defs xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .cls-1 {
+        fill: #ec2d82;
+      }
+
+      .cls-2 {
+        fill: #fbd627;
+      }
+    </style>
+  </defs>
+  <g xmlns="http://www.w3.org/2000/svg">
+    <rect class="cls-1" width="24" height="24"></rect>
+    <rect class="cls-2" y="24" width="24" height="24"></rect>
+  </g>
+  <rect xmlns="http://www.w3.org/2000/svg" class="cls-1" x="24" y="24" width="24" height="24" transform="translate(72 72) rotate(-180)"></rect>
+  <rect xmlns="http://www.w3.org/2000/svg" class="cls-2" x="24" width="24" height="24" transform="translate(72 24) rotate(-180)"></rect></g></g><pattern id="pat" patternUnits="userSpaceOnUse" width="48.000" height="48.000"><use href="#motif" x="-48.000" y="-48.000"/><use href="#motif" x="-48.000" y="0.000"/><use href="#motif" x="-48.000" y="48.000"/><use href="#motif" x="0.000" y="-48.000"/><use href="#motif" x="0.000" y="0.000"/><use href="#motif" x="0.000" y="48.000"/><use href="#motif" x="48.000" y="-48.000"/><use href="#motif" x="48.000" y="0.000"/><use href="#motif" x="48.000" y="48.000"/></pattern></defs><rect width="100%" height="100%" fill="#f3efe7"/><rect width="100%" height="100%" fill="url(#pat)"/></svg>

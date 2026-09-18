@@ -1,11 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336 1024">
   <defs>
     <radialGradient id="radial-gradient" cx="671.9" cy="504.8" r="539.3" fx="671.9" fy="504.8" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#b0d400"/>
-      <stop offset="1" stop-color="#21bf02"/>
+      <stop offset="0" stop-color="#b1e2df"/>
+      <stop offset="1" stop-color="#137e56"/>
     </radialGradient>
     <style>
-      .st0{fill:#f7e702}.st1{fill:#1387ec}.st3{fill:#1cba02}.st4{fill:#a6e611}.st5{display:none}
+      <!-- letters -->
+      .st0{fill:#f7e702}
+      <!-- capitals -->
+      .st1{fill:#1387ec}
+      <!-- splat -->
+      .st3{fill:#137e56}
+      <!-- hilight -->
+      .st4{fill:#fff}
+      .st5{display:none}
     </style>
   </defs>
   <g id="splat">

@@ -7,6 +7,8 @@ import Nav from '../widgets/Nav.astro';
 import { getHeaderData } from '~/navigation';
 import RobertFerguson from '~/assets/images/robert-ferguson-min.svg?raw';
 import Tile from '~/assets/images/tile.svg';
+// import Tile from '~/assets/images/checkers.svg';
+// import Tile from '~/assets/images/triangles.svg';
 
 export interface Props {
   id?: string;
@@ -34,15 +36,15 @@ import nameLogo from '~/assets/images/name.svg?raw';
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
   <div
-    class="absolute inset-0 pointer-events-none opacity-20 dark:opacity-10"
+    class="absolute inset-0 pointer-events-none dark:opacity-30"
     aria-hidden="true"
-    style={`background-image: url('${Tile.src}'); background-repeat: repeat; background-size: auto;`}
+    style={`background-image: url('${Tile.src}'); background-repeat: no-repeat; background-size: cover;`}
   >
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+    <div class="py-12">
+      <div class="text-center pb-10 max-w-5xl mx-auto">
         <div id="hero-name-logo" class="max-w-[640px] mx-auto flex justify-center">
           <Fragment set:html={RobertFerguson} />
         </div>
@@ -58,31 +60,29 @@ import nameLogo from '~/assets/images/name.svg?raw';
           )
         }
 
-        <div class="bg-black/25 p-8 rounded-2xl max-w-[900px] mx-auto">
-          <!-- <div class="justify-center hidden md:flex">
+        <!-- <div class="justify-center hidden md:flex">
             <Nav {...headerData} className="bodyNav" />
           </div> -->
 
-          <div class="max-w-3xl mx-auto">
-            {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-            {
-              actions && (
-                <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-                  {Array.isArray(actions) ? (
-                    actions.map((action) => (
-                      <div class="flex w-full sm:w-auto">
-                        <Button {...(action || {})} class="w-full sm:mb-0" />
-                      </div>
-                    ))
-                  ) : (
-                    <Fragment set:html={actions} />
-                  )}
-                </div>
-              )
-            }
-          </div>
-          {content && <Fragment set:html={content} />}
+        <div class="max-w-3xl mx-auto">
+          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {
+            actions && (
+              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+                {Array.isArray(actions) ? (
+                  actions.map((action) => (
+                    <div class="flex w-full sm:w-auto">
+                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                    </div>
+                  ))
+                ) : (
+                  <Fragment set:html={actions} />
+                )}
+              </div>
+            )
+          }
         </div>
+        {content && <Fragment set:html={content} />}
       </div>
       <div>
         {

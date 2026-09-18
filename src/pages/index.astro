@@ -11,6 +11,7 @@ import meandjack from '~/assets/images/meandjack.webp';
 import map from '~/assets/images/map.svg?raw';
 import chapmanLogo from '~/assets/images/chapman.svg?raw';
 import scadLogo from '~/assets/images/scad.svg?raw';
+import Tile from '~/assets/images/triangles.svg';
 
 const metadata = {
   title: 'Robert Ferguson: Software Engineer',
@@ -18,12 +19,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero id="hero" tagline="Software Engineer">
-    <Fragment slot="subtitle">
-      Hello. I build projects for the web. I've worked in all aspects of design and development since 2006, and my focus
-      at the moment is using TypeScript and React to provide accessible and performant user experiences.
-    </Fragment>
-  </Hero>
+  <Hero id="hero" tagline="" />
 
   <Content
     id="about"
@@ -62,6 +58,10 @@ const metadata = {
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold font-heading tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+        Hello. I build projects for the web. I've worked in all aspects of design and development since 2006, and my
+        focus at the moment is using TypeScript and React to provide accessible and performant user experiences.
+      </p>
       <p>
         I grew up in Southern California and attended Chapman Uiversity where I studied film production. After my
         undergrad I moved to Savannah, Georgia to attend the Savannah College of Art and Design where I earned my MFA in
@@ -115,7 +115,12 @@ const metadata = {
     </Step>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[hsl(188,52%,57%)] dark:bg-[rgb(21,228,169)] dark:mix-blend-overlay"></div>
+      <div
+        class="absolute inset-0 bg-[hsl(188,52%,57%)] dark:bg-[rgb(21,228,169)] dark:mix-blend-overlay"
+        aria-hidden="true"
+        style={`background-image: url('${Tile.src}'); background-repeat: no-repeat; background-size: cover;`}
+      >
+      </div>
     </Fragment>
   </Steps>
 </Layout>

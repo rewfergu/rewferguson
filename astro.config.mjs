@@ -23,6 +23,11 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
 
+  server: {
+    host: true,
+    allowedHosts: ['macmini.local', 'localhost', '127.0.0.1']
+  },
+
   integrations: [
     sitemap(),
     mdx(),
