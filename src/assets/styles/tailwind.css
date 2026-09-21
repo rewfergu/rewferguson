@@ -105,6 +105,7 @@ html.dark #header .background {
 }
 
 #header.expanded .headerNav {
+  display: flex;
   position: fixed;
   top: 70px;
   left: 0;
