@@ -7,12 +7,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && npm run copy",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "export": "touch out/.nojekyll && cp ./CNAME out/CNAME",
     "copy": "cp -r dist/* out",
-    "serve": "python3 -m http.server 8000 --directory out",
+    "serve": "python3 -m http.server 8000 --directory dist",
     "images": "node processImages.js"
   },
   "dependencies": {

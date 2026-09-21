@@ -29,7 +29,7 @@ const { Content } = await render(entry);
     <article>
       <header class={entry.data.cover ? '' : ''}>
         {
-          entry.data.cover ? (
+          entry.data.cover && (
             <Image
               src={entry.data.cover.src}
               class="max-w-full lg:max-w-[900px] mx-auto mb-12 sm:rounded-md bg-gray-400 dark:bg-slate-700"
@@ -41,10 +41,6 @@ const { Content } = await render(entry);
               loading="eager"
               decoding="async"
             />
-          ) : (
-            <div class="max-w-3xl mx-auto px-4 sm:px-6">
-              <div class="border-t dark:border-slate-700" />
-            </div>
           )
         }
 
